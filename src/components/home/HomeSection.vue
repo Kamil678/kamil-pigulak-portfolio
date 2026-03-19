@@ -7,30 +7,22 @@
     <div
       class="mt-36 lg:mt-52 flex flex-col items-center justify-center lg:justify-between container mx-auto lg:flex-row relative z-10 gap-14 lg:gap-0 xl:gap-14 h-full"
     >
-      <div
-        class="lg:w-2/4 text-center lg:text-left text-light-text dark:text-dark-text opacity-0 translate-y-5 animate-fade-in-move"
-      >
-        <h1
-          class="text-4xl xl:text-5xl 2xl:text-6xl text-light-text dark:text-dark-text"
-        >
+      <div class="lg:w-2/4 text-center lg:text-left text-light-text dark:text-dark-text opacity-0 translate-y-5 animate-fade-in-move">
+        <h1 class="text-4xl xl:text-5xl 2xl:text-6xl text-light-text dark:text-dark-text">
           Hi, I am Kamil <br />
           <TypingText :texts="['Frontend Developer', 'Fullstack Developer']" />
         </h1>
         <p class="mt-8 xl:mr-12 text-light-text dark:text-dark-text">
-          I'm a Frontend / Fullstack Developer with over 3,5 years of experience
-          working on commercial projects. I'm passionate about web technologies
-          and continuously expand my skills by keeping up with the latest
-          industry trends. I specialize in JavaScript, TypeScript, and Vue,
-          building modern, efficient, and responsive web applications.
+          I'm a Frontend / Fullstack Developer with over 3,5 years of experience working on commercial projects. I'm passionate about web
+          technologies and continuously expand my skills by keeping up with the latest industry trends. I specialize in JavaScript,
+          TypeScript, and Vue, building modern, efficient, and responsive web applications.
         </p>
-        <Button label="Download CV" @click="downloadCV" class="mt-8" />
+        <AppButton label="Download CV" @click="downloadCV" class="mt-8" />
       </div>
-      <div
-        class="sm:w-3/4 lg:w-2/4 relative flex items-center justify-end scale-0 animate-scale-in"
-      >
+      <div class="sm:w-3/4 lg:w-2/4 relative flex items-center justify-end scale-0 animate-scale-in">
         <div class="glow-frame w-auto">
           <img
-            src="../../assets/kp-image.png"
+            src="../../assets/images/kp-image.png"
             alt="Kamil Pigulak - Frontend Developer"
             class="w-full border-transparent"
             loading="eager"
@@ -43,7 +35,7 @@
 </template>
 
 <script setup>
-import Button from "../shared/Button.vue";
+import AppButton from "../shared/AppButton.vue";
 import TypingText from "./TypingText.vue";
 import SocialLinks from "./SocialLinks.vue";
 

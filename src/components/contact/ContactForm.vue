@@ -59,8 +59,8 @@
 <script setup>
 import { ref, reactive } from "vue";
 import emailjs from "@emailjs/browser";
-import FormInput from "./FormInput.vue";
-import FormTextarea from "./FormTextarea.vue";
+import FormInput from "../shared/FormInput.vue";
+import FormTextarea from "../shared/FormTextarea.vue";
 import FormSubmitButton from "./FormSubmitSection.vue";
 
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
