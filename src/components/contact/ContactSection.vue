@@ -34,8 +34,7 @@ import ContactInfo from "./ContactInfo.vue";
 import ContactForm from "./ContactForm.vue";
 </script>
 
-<style scoped>
-/* Animation classes */
+<style lang="scss" scoped>
 @keyframes fade-from-left {
   from {
     opacity: 0;
@@ -102,7 +101,6 @@ import ContactForm from "./ContactForm.vue";
   animation-delay: 0.3s;
 }
 
-/* Responsive adjustments */
 @media (max-width: 1024px) {
   .animate-fade-from-left,
   .animate-fade-from-right {
