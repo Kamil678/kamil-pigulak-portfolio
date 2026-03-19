@@ -5,33 +5,21 @@
     :class="borderColorClass"
     :aria-label="`Umiejętność: ${skill.name}, poziom: ${skill.mastery}`"
   >
-    <div
-      class="absolute top-0 left-0 w-full h-1"
-      :class="indicatorColorClass"
-      aria-hidden="true"
-    ></div>
+    <div class="absolute top-0 left-0 w-full h-1" :class="indicatorColorClass" aria-hidden="true"></div>
 
     <div class="p-4 flex flex-col items-center justify-center">
-      <div
-        class="p-3 bg-gray-100 dark:bg-gray-700 rounded-lg mb-3 transform group-hover:scale-110 transition-transform duration-300"
-      >
-        <img
-          :src="skill.img"
-          :alt="`${skill.name} logo`"
-          class="w-10 h-10 md:w-12 md:h-12"
-          loading="lazy"
-        />
+      <div class="p-3 bg-gray-100 dark:bg-gray-700 rounded-lg mb-3 transform group-hover:scale-110 transition-transform duration-300">
+        <img :src="skill.img" :alt="`${skill.name} logo`" class="w-10 h-10 md:w-12 md:h-12" loading="lazy" />
       </div>
 
-      <h3
-        class="text-sm md:text-base font-medium text-light-text dark:text-dark-text text-center"
-      >
+      <h3 class="text-sm md:text-base font-medium text-light-text dark:text-dark-text text-center">
         {{ skill.name }}
       </h3>
 
       <div
         class="w-full mt-2 bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 overflow-hidden"
         role="progressbar"
+        :aria-label="`Poziom umiejętności ${skill.name}`"
         :aria-valuenow="getProgressValue(skill.mastery)"
         :aria-valuemin="0"
         :aria-valuemax="100"
@@ -62,9 +50,7 @@ const masteryColorMap = {
   basic: "bg-gray-400",
 };
 
-const indicatorColorClass = computed(
-  () => masteryColorMap[props.skill.mastery] || "bg-gray-400"
-);
+const indicatorColorClass = computed(() => masteryColorMap[props.skill.mastery] || "bg-gray-400");
 
 const borderColorClass = computed(() => {
   const map = {
@@ -113,7 +99,7 @@ onMounted(() => {
         observerInstance.unobserve(entry.target);
       }
     },
-    { threshold: 0.3 }
+    { threshold: 0.3 },
   );
 
   if (cardRef.value) observer.observe(cardRef.value);
