@@ -2,7 +2,12 @@
   <div id="about-me-panel" aria-labelledby="about-me-tab" class="animate-fade-in">
     <div class="flex flex-col lg:flex-row gap-10 2xl:gap-20">
       <div class="w-full md:w-2/3 mx-auto 2xl:w-1/2 overflow-hidden transition-transform duration-300">
-        <img src="../../../assets/images/kp.png" alt="Kamil Pigulak photo" class="w-full shadow-lg rounded-lg" loading="lazy" />
+        <img
+          src="../../../assets/images/kp-about-image.webp"
+          alt="Kamil Pigulak photo"
+          class="w-full shadow-lg rounded-lg"
+          loading="lazy"
+        />
       </div>
       <div
         class="text-center lg:text-left lg:w-2/3 flex flex-col gap-4 text-sm sm:text-base text-light-text dark:text-dark-text leading-relaxed"
