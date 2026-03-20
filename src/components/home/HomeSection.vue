@@ -22,7 +22,7 @@
       <div class="sm:w-3/4 lg:w-2/4 relative flex items-center justify-end scale-0 animate-scale-in">
         <div class="glow-frame w-auto">
           <img
-            src="../../assets/images/kp-image.png"
+            src="../../assets/images/kp-home-image.webp"
             alt="Kamil Pigulak - Frontend Developer"
             class="w-full border-transparent"
             loading="eager"

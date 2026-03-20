@@ -2,7 +2,7 @@ export const PROJECTS_DATA = [
   {
     id: 1,
     name: "Movie App",
-    image: new URL("../assets/images/projects/movie-app.png", import.meta.url).href,
+    image: new URL("../assets/images/projects/movie-app.webp", import.meta.url).href,
     link: "https://dazzling-valkyrie-c0fb6c.netlify.app/",
     linkGithub: "https://github.com/Kamil678/movie-app",
     description: "A modern and responsive movie browsing application built from scratch with Vue 3, TypeScript, and Tailwind CSS.",
@@ -11,7 +11,7 @@ export const PROJECTS_DATA = [
   {
     id: 2,
     name: "Fullstack Blog",
-    image: new URL("../assets/images/projects/fullstack-blog.png", import.meta.url).href,
+    image: new URL("../assets/images/projects/fullstack-blog.webp", import.meta.url).href,
     link: "https://fullstack-blog-udax.onrender.com/",
     linkGithub: "https://github.com/Kamil678/fullstack-blog",
     description: "A complete blogging solution with robust backend and engaging frontend.",
@@ -20,7 +20,7 @@ export const PROJECTS_DATA = [
   {
     id: 3,
     name: "All Countries App",
-    image: new URL("../assets/images/projects/all-countries-app.png", import.meta.url).href,
+    image: new URL("../assets/images/projects/all-countries-app.webp", import.meta.url).href,
     link: "https://kamil678.github.io/countries-project/",
     linkGithub: "https://github.com/Kamil678/countries-project",
     description: "A clean and modern web app for exploring countries around the world.",
@@ -29,7 +29,7 @@ export const PROJECTS_DATA = [
   {
     id: 4,
     name: "Wedding Friends",
-    image: new URL("../assets/images/projects/wedding-friends-page.png", import.meta.url).href,
+    image: new URL("../assets/images/projects/wedding-friends-page.webp", import.meta.url).href,
     link: "https://weddingfriends.pl/",
     description: "Responsive website for wedding planners with multi-language support and custom design.",
     techStack: ["Vue", "Vue Router", "Vue-i18n", "JavaScript", "Vite", "Scss"],
@@ -37,7 +37,7 @@ export const PROJECTS_DATA = [
   {
     id: 5,
     name: "Weddings In Krakow",
-    image: new URL("../assets/images/projects/weddings-in-krakow.png", import.meta.url).href,
+    image: new URL("../assets/images/projects/weddings-in-krakow.webp", import.meta.url).href,
     link: "https://weddingsinkrakow.com/",
     description: "A comprehensive wedding planning platform designed to connect couples with trusted vendors.",
     techStack: ["Vue", "Vue Router", "Vue-i18n", "JavaScript", "Vite", "Scss"],
