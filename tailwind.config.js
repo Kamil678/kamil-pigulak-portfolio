@@ -1,27 +1,55 @@
 /** @type {import('tailwindcss').Config} */
+
+// Colors are CSS variables (RGB channels) defined in src/style.css for :root and .dark,
+// so components use one class (e.g. `bg-surface`) for both themes.
+const token = (name) => `rgb(var(--${name}) / <alpha-value>)`;
+
 export default {
   darkMode: "class",
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
+    container: {
+      center: true,
+      padding: { DEFAULT: "1.25rem", md: "2rem" },
+      screens: { "2xl": "1200px" },
+    },
     extend: {
       colors: {
-        light: {
-          background: "#fff",
-          text: "#121212",
-          accent: "#007c59",
-        },
-        dark: {
-          background: "#121212",
-          text: "#E2E8F0",
-          accent: "#00a571",
-        },
-        yellow: "#fde047",
+        bg: token("bg"),
+        surface: token("surface"),
+        "surface-2": token("surface-2"),
+        border: token("border"),
+        text: token("text"),
+        muted: token("muted"),
+        accent: token("accent"),
+        "accent-contrast": token("accent-contrast"),
       },
-      backgroundImage: {
-        "light-gradient":
-          "linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(0, 124, 89, 0.05) 100%)",
-        "dark-gradient":
-          "linear-gradient(135deg, rgba(18, 18, 18, 1) 0%, rgba(22, 32, 28, 1) 100%)",
+      fontFamily: {
+        sans: ["Geist", "Geist Fallback", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["Geist Mono", "ui-monospace", "SFMono-Regular", "monospace"],
+      },
+      letterSpacing: {
+        tightest: "-0.04em",
+      },
+      keyframes: {
+        "fade-up": {
+          from: { opacity: "0", transform: "translateY(12px)" },
+          to: { opacity: "1", transform: "none" },
+        },
+        blink: {
+          "0%, 50%": { opacity: "1" },
+          "50.01%, 100%": { opacity: "0" },
+        },
+        pulse: {
+          "0%": { boxShadow: "0 0 0 0 rgb(var(--accent) / 0.5)" },
+          "70%": { boxShadow: "0 0 0 8px rgb(var(--accent) / 0)" },
+          "100%": { boxShadow: "0 0 0 0 rgb(var(--accent) / 0)" },
+        },
+      },
+      animation: {
+        "fade-up": "fade-up 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both",
+        blink: "blink 1.1s step-end infinite",
+        pulse: "pulse 2s ease-out infinite",
       },
     },
   },
