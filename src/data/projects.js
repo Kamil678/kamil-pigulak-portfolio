@@ -1,9 +1,5 @@
-// Covers come in 800w and 1600w versions; URLs are written out statically so Vite only bundles these files.
 const cover = (small, large, width, height) => ({ src: small, srcset: `${small} 800w, ${large} 1600w`, width, height });
 
-// `type`: "client" (commercial work) or "personal" (side project).
-// `featured` projects get large cards at the top of the Work section.
-// Case study texts are drafts — verify facts before publishing.
 export const PROJECTS = [
   {
     slug: "movie-app",
@@ -19,20 +15,20 @@ export const PROJECTS = [
     link: "https://dazzling-valkyrie-c0fb6c.netlify.app/",
     linkGithub: "https://github.com/Kamil678/movie-app",
     techStack: ["Vue 3", "TypeScript", "Pinia", "Tailwind CSS", "Axios", "Vite"],
-    role: { en: "Solo project — design & development", pl: "Projekt solo — projekt i development" },
+    role: { en: "Solo project: design & development", pl: "Projekt solo: projekt i development" },
     outcome: {
       en: "A responsive movie browser built from scratch with a fully typed Vue 3 architecture.",
       pl: "Responsywna przeglądarka filmów zbudowana od zera na w pełni otypowanej architekturze Vue 3.",
     },
     caseStudy: {
       problem: {
-        en: "I wanted a project that mirrors how I work commercially: a Vue 3 + TypeScript app talking to a real external API, with state, routing and a responsive UI — not a tutorial clone.",
-        pl: "Chciałem projektu, który odzwierciedla to, jak pracuję komercyjnie: aplikacji Vue 3 + TypeScript komunikującej się z prawdziwym zewnętrznym API, ze stanem, routingiem i responsywnym UI — a nie kopii tutoriala.",
+        en: "I wanted a project that mirrors how I work commercially: a Vue 3 + TypeScript app talking to a real external API, with state, routing and a responsive UI, not a tutorial clone.",
+        pl: "Chciałem projektu, który odzwierciedla to, jak pracuję komercyjnie: aplikacji Vue 3 + TypeScript komunikującej się z prawdziwym zewnętrznym API, ze stanem, routingiem i responsywnym UI, a nie kopii tutoriala.",
       },
       approach: [
         {
           en: "A typed API layer built on a shared Axios instance, so components never deal with raw responses.",
-          pl: "Otypowana warstwa API oparta na wspólnej instancji Axios — komponenty nie operują na surowych odpowiedziach.",
+          pl: "Otypowana warstwa API oparta na wspólnej instancji Axios, dzięki czemu komponenty nie operują na surowych odpowiedziach.",
         },
         {
           en: "Pinia stores for shared state (search, lists, details), keeping views thin and easy to test.",
@@ -52,8 +48,8 @@ export const PROJECTS = [
         { en: "A codebase I use as a reference for structuring Vue 3 + TypeScript projects.", pl: "Kod, który traktuję jako wzorzec struktury projektów Vue 3 + TypeScript." },
       ],
       learnings: {
-        en: "Typing the API boundary first pays off quickly — most bugs surfaced at compile time instead of in the browser.",
-        pl: "Otypowanie granicy z API na samym początku szybko się zwraca — większość błędów wychodziła już przy kompilacji, a nie w przeglądarce.",
+        en: "Typing the API boundary first pays off quickly, because most bugs surfaced at compile time instead of in the browser.",
+        pl: "Otypowanie granicy z API na samym początku szybko się zwraca, bo większość błędów wychodziła już przy kompilacji, a nie w przeglądarce.",
       },
     },
   },
@@ -71,15 +67,15 @@ export const PROJECTS = [
     link: "https://fullstack-blog-udax.onrender.com/",
     linkGithub: "https://github.com/Kamil678/fullstack-blog",
     techStack: ["React", "Node.js", "Express.js", "MongoDB", "JWT Auth"],
-    role: { en: "Solo project — frontend & backend", pl: "Projekt solo — frontend i backend" },
+    role: { en: "Solo project: frontend & backend", pl: "Projekt solo: frontend i backend" },
     outcome: {
-      en: "A complete blogging platform — React frontend, Express REST API and MongoDB, with JWT authentication.",
-      pl: "Kompletna platforma blogowa — frontend w React, REST API w Express i MongoDB, z uwierzytelnianiem JWT.",
+      en: "A complete blogging platform: React frontend, Express REST API and MongoDB, with JWT authentication.",
+      pl: "Kompletna platforma blogowa: frontend w React, REST API w Express i MongoDB, z uwierzytelnianiem JWT.",
     },
     caseStudy: {
       problem: {
-        en: "Build an end-to-end product on my own: user accounts, protected content management and a public reading experience — and deploy it as one application.",
-        pl: "Samodzielnie zbudować produkt end-to-end: konta użytkowników, chronione zarządzanie treścią i publiczną część do czytania — i wdrożyć całość jako jedną aplikację.",
+        en: "Build an end-to-end product on my own: user accounts, protected content management and a public reading experience, and deploy it as one application.",
+        pl: "Samodzielnie zbudować produkt end-to-end: konta użytkowników, chronione zarządzanie treścią i publiczną część do czytania, a potem wdrożyć całość jako jedną aplikację.",
       },
       approach: [
         {
@@ -96,12 +92,12 @@ export const PROJECTS = [
         },
       ],
       results: [
-        { en: "Deployed on Render with the frontend and API running together.", pl: "Wdrożony na Render — frontend i API działają razem." },
+        { en: "Deployed on Render with the frontend and API running together.", pl: "Wdrożony na Render, frontend i API działają razem." },
         { en: "Shows I can own a feature from the database to the UI.", pl: "Pokazuje, że potrafię odpowiadać za funkcjonalność od bazy danych po UI." },
       ],
       learnings: {
-        en: "Designing the API contract before writing UI made the React side much simpler — and taught me to think about auth as a whole-system concern.",
-        pl: "Zaprojektowanie kontraktu API przed pisaniem UI mocno uprościło część w React — i nauczyło mnie myśleć o autoryzacji jako o sprawie całego systemu.",
+        en: "Designing the API contract before writing UI made the React side much simpler and taught me to think about auth as a whole-system concern.",
+        pl: "Zaprojektowanie kontraktu API przed pisaniem UI mocno uprościło część w React i nauczyło mnie myśleć o autoryzacji jako o sprawie całego systemu.",
       },
     },
   },
@@ -118,15 +114,18 @@ export const PROJECTS = [
     ),
     link: "https://weddingsinkrakow.com/",
     techStack: ["Vue", "Vue Router", "Vue-i18n", "JavaScript", "Vite", "Scss"],
-    role: { en: "Frontend developer", pl: "Frontend developer" },
+    role: {
+      en: "Freelance: website, domain, DNS & hosting",
+      pl: "Freelance: strona, domena, DNS i hosting",
+    },
     outcome: {
       en: "A multilingual wedding-planning platform connecting couples with trusted vendors in Kraków.",
       pl: "Wielojęzyczna platforma do planowania ślubu, łącząca pary z zaufanymi usługodawcami w Krakowie.",
     },
     caseStudy: {
       problem: {
-        en: "Couples — many of them from abroad — needed one place to discover the wedding services available in Kraków, in their own language.",
-        pl: "Pary — w dużej części z zagranicy — potrzebowały jednego miejsca, w którym w swoim języku poznają ofertę ślubną w Krakowie.",
+        en: "Couples, many of them from abroad, needed one place to discover the wedding services available in Kraków, in their own language.",
+        pl: "Pary, w dużej części z zagranicy, potrzebowały jednego miejsca, w którym w swoim języku poznają ofertę ślubną w Krakowie.",
       },
       approach: [
         {
@@ -135,7 +134,7 @@ export const PROJECTS = [
         },
         {
           en: "Full internationalisation with vue-i18n, so every page and piece of content is available in multiple languages.",
-          pl: "Pełna internacjonalizacja z vue-i18n — każda strona i treść jest dostępna w kilku językach.",
+          pl: "Pełna internacjonalizacja z vue-i18n, dzięki której każda strona i treść jest dostępna w kilku językach.",
         },
         {
           en: "A custom, responsive design implemented in SCSS to match the brand.",
@@ -144,6 +143,10 @@ export const PROJECTS = [
       ],
       results: [
         { en: "Live in production at weddingsinkrakow.com.", pl: "Działa produkcyjnie pod adresem weddingsinkrakow.com." },
+        {
+          en: "Delivered end to end, from the code to configuring the domain, DNS and hosting.",
+          pl: "Dowiezione od A do Z, od kodu po konfigurację domeny, DNS i hostingu.",
+        },
         { en: "Reaches international couples in their own language.", pl: "Trafia do par z zagranicy w ich własnym języku." },
       ],
       learnings: {
@@ -219,8 +222,8 @@ export const PROJECTS = [
     },
     caseStudy: {
       problem: {
-        en: "Practise the fundamentals without a framework: fetching data, rendering lists, search and filtering — all in plain JavaScript.",
-        pl: "Przećwiczyć podstawy bez frameworka: pobieranie danych, renderowanie list, wyszukiwanie i filtrowanie — wszystko w czystym JavaScripcie.",
+        en: "Practise the fundamentals without a framework: fetching data, rendering lists, search and filtering, all in plain JavaScript.",
+        pl: "Przećwiczyć podstawy bez frameworka: pobieranie danych, renderowanie list, wyszukiwanie i filtrowanie, wszystko w czystym JavaScripcie.",
       },
       approach: [
         {
@@ -229,7 +232,7 @@ export const PROJECTS = [
         },
         {
           en: "Search and filtering implemented on the client for instant feedback.",
-          pl: "Wyszukiwanie i filtrowanie po stronie klienta — wyniki pojawiają się natychmiast.",
+          pl: "Wyszukiwanie i filtrowanie po stronie klienta, więc wyniki pojawiają się natychmiast.",
         },
         {
           en: "Responsive layout in modern CSS, without a UI library.",
@@ -240,8 +243,8 @@ export const PROJECTS = [
         { en: "Hosted on GitHub Pages.", pl: "Hostowana na GitHub Pages." },
       ],
       learnings: {
-        en: "Building without a framework made it much clearer what Vue and React actually do for me — and when they're worth it.",
-        pl: "Praca bez frameworka pokazała mi, co tak naprawdę robią za mnie Vue i React — i kiedy warto po nie sięgać.",
+        en: "Building without a framework made it much clearer what Vue and React actually do for me and when they're worth it.",
+        pl: "Praca bez frameworka pokazała mi, co tak naprawdę robią za mnie Vue i React oraz kiedy warto po nie sięgać.",
       },
     },
   },
