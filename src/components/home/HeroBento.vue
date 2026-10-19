@@ -39,7 +39,7 @@
           width="1400"
           height="1400"
           fetchpriority="high"
-          class="absolute inset-0 h-full w-full object-cover object-[52%_25%]"
+          class="absolute inset-0 h-full w-full object-cover object-[52%_0%] lg:object-[52%_25%]"
         />
       </div>
 
