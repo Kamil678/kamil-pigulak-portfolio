@@ -51,7 +51,6 @@
       </div>
     </div>
 
-    <!-- Teleported: the header's backdrop-filter would otherwise become the containing block for `fixed` -->
     <Teleport to="body">
       <Transition
         enter-active-class="transition duration-200 ease-out"
@@ -106,14 +105,12 @@ watch(
   () => route.fullPath,
   () => {
     isMenuOpen.value = false;
-    // Sections change when the page changes — recompute once the new page has rendered.
     setTimeout(update, 300);
   },
 );
 
 const onMobileLinkClick = async (id) => {
   isMenuOpen.value = false;
-  // Scroll only after the body scroll lock is released, otherwise smooth scrolling stops short.
   await nextTick();
   requestAnimationFrame(() => goToSection(id));
 };

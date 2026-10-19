@@ -1,5 +1,3 @@
-// v-reveal: fades an element in when it scrolls into view.
-// Optional value is a delay in ms, e.g. v-reveal="index * 60" for staggered grids.
 const observer =
   typeof IntersectionObserver === "undefined"
     ? null

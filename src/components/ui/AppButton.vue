@@ -10,14 +10,13 @@
 import { computed } from "vue";
 import { RouterLink } from "vue-router";
 
-// Renders a <RouterLink> (to), <a> (href) or <button>, with shared styles.
 const props = defineProps({
   to: { type: [String, Object], default: null },
   href: { type: String, default: null },
   external: { type: Boolean, default: false },
   download: { type: Boolean, default: false },
-  variant: { type: String, default: "primary" }, // primary | secondary | ghost
-  size: { type: String, default: "md" }, // sm | md
+  variant: { type: String, default: "primary" },
+  size: { type: String, default: "md" },
   icon: { type: String, default: null },
   iconRight: { type: String, default: null },
 });
