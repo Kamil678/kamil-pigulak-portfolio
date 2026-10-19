@@ -1,6 +1,6 @@
 <template>
   <li class="relative grid gap-4 md:grid-cols-[minmax(0,200px)_1fr] md:gap-10">
-    <div class="md:pt-6">
+    <div>
       <p class="font-mono text-sm text-accent">{{ experience.start }} - {{ experience.end ?? t("experience.present") }}</p>
       <p class="mt-1 text-lg font-semibold">{{ experience.company }}</p>
       <p class="text-sm text-muted">{{ l(experience.location) }}</p>
@@ -20,7 +20,7 @@
 
       <ul class="mt-6 space-y-3">
         <li v-for="(item, index) in visibleItems" :key="index" class="flex gap-3 text-pretty">
-          <i class="bx bx-check mt-0.5 text-xl text-accent" aria-hidden="true"></i>
+          <i class="bx bx-check flex h-6 shrink-0 items-center text-xl text-accent" aria-hidden="true"></i>
           <span>{{ l(item) }}</span>
         </li>
       </ul>
@@ -37,7 +37,9 @@
       </button>
 
       <ul class="mt-6 flex flex-wrap gap-1.5 border-t border-border pt-6">
-        <li v-for="tech in experience.technologies" :key="tech"><TechTag>{{ tech }}</TechTag></li>
+        <li v-for="tech in experience.technologies" :key="tech">
+          <TechTag>{{ tech }}</TechTag>
+        </li>
       </ul>
     </article>
   </li>
