@@ -71,13 +71,13 @@
           <h2 id="cs-results" class="eyebrow">{{ t("caseStudy.results") }}</h2>
           <ul class="mt-6 space-y-3">
             <li v-for="(result, index) in project.caseStudy.results" :key="index" class="flex gap-3 text-lg">
-              <i class="bx bx-check mt-1 text-xl text-accent" aria-hidden="true"></i>
+              <i class="bx bx-check flex h-7 shrink-0 items-center text-xl text-accent" aria-hidden="true"></i>
               <span class="text-pretty">{{ l(result) }}</span>
             </li>
           </ul>
         </section>
 
-        <section v-reveal aria-labelledby="cs-learnings">
+        <section v-if="project.caseStudy.learnings" v-reveal aria-labelledby="cs-learnings">
           <h2 id="cs-learnings" class="eyebrow">{{ t("caseStudy.learnings") }}</h2>
           <blockquote class="mt-4 border-l-2 border-accent pl-5 text-pretty text-xl italic leading-relaxed text-muted">
             {{ l(project.caseStudy.learnings) }}
