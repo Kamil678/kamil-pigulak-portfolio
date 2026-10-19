@@ -4,23 +4,70 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kamil Pigulak — Frontend Developer (Vue & React)</title>
     <meta
       name="description"
-      content="Frontend developer portfolio - modern web applications in Vue, React and JavaScript. See my projects and skills."
+      content="Frontend Developer with 4+ years of commercial experience building fast, accessible web apps in Vue, React and TypeScript. Projects, case studies and CV."
+    />
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kamil Pigulak — Frontend Developer (Vue & React)" />
+    <meta
+      property="og:description"
+      content="Frontend Developer building fast, accessible interfaces in Vue & React. Projects, case studies and CV."
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kamil Pigulak",
+        "jobTitle": "Frontend Developer",
+        "email": "mailto:kamilpigulak@gmail.com",
+        "address": { "@type": "PostalAddress", "addressRegion": "Małopolska", "addressCountry": "PL" },
+        "knowsAbout": ["Vue.js", "React", "TypeScript", "JavaScript", "Tailwind CSS", "Node.js", "Laravel"],
+        "sameAs": ["https://www.linkedin.com/in/kamil-pigulak/", "https://github.com/Kamil678"]
+      }
+    </script>
+
+    <!-- Apply saved theme and language before first paint to avoid a flash -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("darkMode");
+          var dark = saved !== null ? JSON.parse(saved) : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.classList.toggle("dark", dark);
+          var locale = localStorage.getItem("locale") || (navigator.language || "en").slice(0, 2);
+          document.documentElement.lang = locale === "pl" ? "pl" : "en";
+        } catch (e) {}
+      })();
+    </script>
+
+    <link
+      rel="preload"
+      as="image"
+      href="/images/kp-photo-800.webp"
+      imagesrcset="/images/kp-photo-800.webp 800w, /images/kp-photo-1400.webp 1400w"
+      imagesizes="(min-width: 1024px) 600px, 100vw"
+      fetchpriority="high"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       as="style"
-      onload="
-        this.onload = null;
-        this.rel = 'stylesheet';
-      "
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-
-    <title>Kamil Pigulak | Frontend Developer</title>
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&display=swap"
+      />
+    </noscript>
   </head>
   <body>
     <div id="app"></div>
