@@ -1,38 +1,22 @@
-export const educationData = [
+export const EDUCATION = [
   {
-    institution: "Politechnika Krakowska",
-    period: "2020 - 2024",
-    degree: "Automation and Robotics Engineer",
-    field: "Programming & Human-Machine Interfaces",
-    description:
-      "Engineering program with strong focus on programming fundamentals, HMI development, algorithm design and implementation of interactive control systems. Gained cross-disciplinary skills in software development with practical applications in automation systems and user interfaces.",
-    achievements: [
-      "Specialized in web technologies for industrial interfaces and control systems",
-      "Senior project: Development of responsive web application for monitoring and controlling automated processes",
-      "Completed additional coursework in JavaScript, HTML5/CSS3 and modern web frameworks",
-    ],
+    institution: { en: "Cracow University of Technology", pl: "Politechnika Krakowska" },
+    period: "2020 – 2024",
+    degree: { en: "BEng, Automation and Robotics", pl: "Inżynier, Automatyka i Robotyka" },
+    field: {
+      en: "Programming & Human-Machine Interfaces",
+      pl: "Programowanie i interfejsy człowiek–maszyna",
+    },
+    description: {
+      en: "Strong focus on programming fundamentals, algorithms and HMI development. Thesis: a responsive web application for monitoring and controlling automated processes.",
+      pl: "Nacisk na podstawy programowania, algorytmy i tworzenie interfejsów HMI. Praca inżynierska: responsywna aplikacja webowa do monitorowania i sterowania procesami zautomatyzowanymi.",
+    },
   },
 ];
 
-export const coursesData = [
-  {
-    name: "Vue - The Complete Guide (incl. Router & Composition API)",
-    issuer: "Udemy, Maximilian Schwarzmüller",
-    date: "2022",
-  },
-  {
-    name: "Understanding TypeScript",
-    issuer: "Udemy, Maximilian Schwarzmüller",
-    date: "2022",
-  },
-  {
-    name: "Kurs FullStack Developer kompletny od Podstaw do Mastera 72h",
-    issuer: "Udemy, Edutago Kursy video, Kuba Wąsikowski",
-    date: "2023",
-  },
-  {
-    name: "The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert",
-    issuer: "Udemy",
-    date: "2024",
-  },
+export const COURSES = [
+  { name: "Vue — The Complete Guide (incl. Router & Composition API)", issuer: "Udemy · Maximilian Schwarzmüller", year: "2022" },
+  { name: "Understanding TypeScript", issuer: "Udemy · Maximilian Schwarzmüller", year: "2022" },
+  { name: "Kurs FullStack Developer kompletny od Podstaw do Mastera 72h", issuer: "Udemy · Edutago, Kuba Wąsikowski", year: "2023" },
+  { name: "The Ultimate MySQL Bootcamp", issuer: "Udemy", year: "2024" },
 ];
