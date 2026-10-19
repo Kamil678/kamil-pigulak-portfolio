@@ -44,7 +44,6 @@
       </div>
 
       <h3 class="mt-3 font-semibold tracking-tight" :class="large ? 'text-2xl md:text-3xl' : 'text-xl'">
-        <!-- The pseudo-element stretches the link over the whole card -->
         <RouterLink
           :to="{ name: 'case-study', params: { slug: project.slug } }"
           class="rounded after:absolute after:inset-0 after:content-['']"

@@ -1,7 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-
-// Colors are CSS variables (RGB channels) defined in src/style.css for :root and .dark,
-// so components use one class (e.g. `bg-surface`) for both themes.
 const token = (name) => `rgb(var(--${name}) / <alpha-value>)`;
 
 export default {

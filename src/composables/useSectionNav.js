@@ -3,8 +3,6 @@ import { useRoute, useRouter } from "vue-router";
 
 export const SECTIONS = ["work", "experience", "stack", "about", "contact"];
 
-// Navigates to a section of the home page. On the home page it scrolls directly
-// (the router ignores navigation to an identical location); elsewhere it routes to /#id.
 export function useSectionNav() {
   const route = useRoute();
   const router = useRouter();
@@ -21,7 +19,6 @@ export function useSectionNav() {
   return { goToSection };
 }
 
-// Tracks which home section takes up most of the viewport (logic ported from the previous Nav.vue).
 export function useActiveSection() {
   const activeSection = ref(null);
   const hasScrolled = ref(false);
@@ -49,7 +46,6 @@ export function useActiveSection() {
         best = id;
       }
     }
-    // The hero has no nav item, so nothing is active until a section fills a third of the screen.
     activeSection.value = bestVisible > window.innerHeight / 3 ? best : null;
   };
 

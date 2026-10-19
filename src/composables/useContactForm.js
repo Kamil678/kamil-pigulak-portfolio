@@ -8,11 +8,10 @@ const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 const FIELDS = ["name", "email", "subject", "message"];
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// Errors are i18n keys (e.g. "contact.validation.required") so they re-translate on language change.
 export function useContactForm() {
   const form = reactive({ name: "", email: "", subject: "", message: "" });
   const errors = reactive({ name: "", email: "", subject: "", message: "" });
-  const status = ref("idle"); // idle | sending | success | error
+  const status = ref("idle");
 
   const validateField = (field) => {
     const value = form[field].trim();
@@ -21,7 +20,6 @@ export function useContactForm() {
     else errors[field] = "";
   };
 
-  // Re-validate on input only once a field already shows an error, so users aren't nagged while typing.
   const revalidateIfInvalid = (field) => {
     if (errors[field]) validateField(field);
   };

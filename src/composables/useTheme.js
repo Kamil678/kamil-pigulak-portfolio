@@ -1,6 +1,5 @@
 import { ref } from "vue";
 
-// The initial class is set by the inline script in index.html (saved choice → prefers-color-scheme).
 const isDark = ref(document.documentElement.classList.contains("dark"));
 
 export function useTheme() {
@@ -9,9 +8,7 @@ export function useTheme() {
     document.documentElement.classList.toggle("dark", isDark.value);
     try {
       localStorage.setItem("darkMode", JSON.stringify(isDark.value));
-    } catch {
-      // ignore — the choice just won't persist
-    }
+    } catch {}
   };
 
   return { isDark, toggleTheme };
