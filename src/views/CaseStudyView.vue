@@ -44,7 +44,7 @@
           :src="project.cover.src"
           :srcset="project.cover.srcset"
           sizes="(min-width: 1248px) 1200px, 100vw"
-          :alt="`${project.name} — screenshot`"
+          :alt="`${project.name} screenshot`"
           :width="project.cover.width"
           :height="project.cover.height"
           class="h-auto w-full"

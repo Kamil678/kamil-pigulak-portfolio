@@ -1,7 +1,5 @@
 import { useI18n } from "vue-i18n";
 
-// Content in src/data/ stores translatable fields as { en, pl }.
-// `l(field)` picks the current locale and passes plain values through unchanged.
 export function useLocalized() {
   const { locale } = useI18n();
 
@@ -12,5 +10,7 @@ export function useLocalized() {
     return value;
   };
 
-  return { l, locale };
+  const num = (value) => value.toLocaleString(locale.value);
+
+  return { l, num, locale };
 }

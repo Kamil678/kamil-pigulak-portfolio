@@ -1,7 +1,7 @@
 <template>
   <li class="relative grid gap-4 md:grid-cols-[minmax(0,200px)_1fr] md:gap-10">
     <div class="md:pt-6">
-      <p class="font-mono text-sm text-accent">{{ experience.start }} — {{ experience.end ?? t("experience.present") }}</p>
+      <p class="font-mono text-sm text-accent">{{ experience.start }} - {{ experience.end ?? t("experience.present") }}</p>
       <p class="mt-1 text-lg font-semibold">{{ experience.company }}</p>
       <p class="text-sm text-muted">{{ l(experience.location) }}</p>
     </div>

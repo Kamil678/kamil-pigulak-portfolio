@@ -1,9 +1,9 @@
 export default {
   meta: {
-    homeTitle: "Kamil Pigulak — Frontend Developer (Vue & React)",
+    homeTitle: "Kamil Pigulak · Frontend Developer (Vue & React)",
     homeDescription:
-      "Frontend Developer with {years}+ years of commercial experience building fast, accessible web apps in Vue, React and TypeScript. Projects, case studies and CV.",
-    caseStudyTitle: "{name} — Case study · Kamil Pigulak",
+      "Frontend Developer with {years} years of commercial experience building modern, high-performance web apps in Vue, React and TypeScript. Projects, case studies and CV.",
+    caseStudyTitle: "{name} · Case study · Kamil Pigulak",
     notFoundTitle: "Page not found · Kamil Pigulak",
   },
   a11y: {
@@ -25,11 +25,11 @@ export default {
     cv: "Download CV",
   },
   hero: {
-    statusOpen: "Open to new opportunities",
+    statusOpen: "Open to new roles & freelance",
     statusClosed: "Not looking right now",
     titleLead: "Frontend Developer",
-    titleRest: "building fast, accessible interfaces in Vue & React.",
-    lead: "{years}+ years of shipping commercial products — from authentication flows and PWAs to an e-commerce booking platform. Fluent in TypeScript and comfortable across the stack with Node.js and Laravel.",
+    titleRest: "building modern, high-performance apps in Vue & React.",
+    lead: "I build modern, high-performance web apps and websites with a focus on code quality and UX: from offline-first PWAs and admin panels to systems shared by many applications.",
     cta: "Get in touch",
     years: "year of commercial experience | years of commercial experience",
     location: "Location",
@@ -39,28 +39,29 @@ export default {
   },
   sections: {
     work: {
-      eyebrow: "01 — Selected work",
+      eyebrow: "01 / Selected work",
       title: "Projects with the story behind them",
       description: "Client sites and side projects. Each one has a short case study: the problem, the decisions I made and the result.",
     },
     experience: {
-      eyebrow: "02 — Experience",
+      eyebrow: "02 / Experience",
       title: "Where I've made an impact",
-      description: "Commercial work across product teams and e-commerce, mostly in Vue and TypeScript.",
+      description: "Commercial work in product teams and as a freelancer, in Vue, React and TypeScript, from architecture to deployment.",
     },
     stack: {
-      eyebrow: "03 — Stack",
+      eyebrow: "03 / Stack",
       title: "Tools I use to ship",
-      description: "Grouped by how often I actually use them — not by self-rated stars.",
+      description: "Grouped by how often I actually use them, not by self-rated stars.",
     },
     about: {
-      eyebrow: "04 — About",
+      eyebrow: "04 / About",
       title: "A bit more about me",
     },
     contact: {
-      eyebrow: "05 — Contact",
+      eyebrow: "05 / Contact",
       title: "Let's build something good together.",
-      description: "Hiring for a frontend role or need a hand with a Vue or React project? I usually reply within 24 hours.",
+      description:
+        "Hiring for a frontend or full-stack role, or looking for someone to build your Vue, Nuxt or React project? I usually reply within 24 hours.",
     },
   },
   work: {
@@ -89,9 +90,9 @@ export default {
   },
   about: {
     paragraphs: [
-      "I'm a frontend developer from the Kraków area. During my engineering studies in Automation and Robotics I built interfaces for control systems — and realised that the part I enjoy most is the one people actually touch.",
-      "Since 2022 I've been building commercial products at Mediaflex, mostly with Vue 3 and TypeScript, and I've also worked full-stack on an e-commerce booking platform at Vexperio. I care about performance, accessibility and code the next developer will be happy to work with.",
-      "Outside of work you'll find me on a football pitch — it keeps me competitive and reminds me that good results come from good teamwork.",
+      "I've been working commercially as a Frontend Developer since {since}, in product teams and on my own as a freelancer. I specialise in Vue 3, Nuxt and TypeScript, and I'm just as comfortable with React in commercial projects.",
+      "I build applications from architecture to pixel-perfect implementation: admin panels, offline-first PWAs and systems shared by many applications. On my own projects I own the whole process: from talking to the client and gathering requirements, through design and code, to deployment, domain and hosting.",
+      "I care about readable code, automated tests, performance and accessibility (WCAG). I work with Claude Code every day, deliberately and critically, because responsibility for the code always stays with me. I'm growing towards full-stack (PHP/Symfony).",
     ],
     statYears: "year of experience | years of experience",
     statProjects: "projects delivered",
@@ -110,7 +111,7 @@ export default {
       message: "Message",
       submit: "Send message",
       sending: "Sending…",
-      success: "Thanks! Your message is on its way — I'll get back to you soon.",
+      success: "Thanks! Your message is on its way. I'll get back to you soon.",
       error: "Something went wrong. Please email me directly at {email}.",
     },
     validation: {
@@ -130,7 +131,7 @@ export default {
     prev: "Previous",
     next: "Next",
     ctaTitle: "Like what you see?",
-    ctaText: "I'm open to new opportunities. Let's talk about your team and product.",
+    ctaText: "I'm open to new roles and freelance projects. Let's talk about your team and product.",
   },
   notFound: {
     title: "Page not found",
