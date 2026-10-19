@@ -1,54 +1,77 @@
-export const experiencesData = [
+export const EXPERIENCES = [
   {
-    company: "Mediaflex, Kraków",
-    period: "05.2022 – Present",
-    technologies: [
-      "JavaScript",
-      "jQuery",
-      "Bootstrap",
-      "Scss",
-      "PHP",
-      "Vue.js",
-      "Vue Router",
-      "TypeScript",
-      "Axios",
-      "Pinia",
-      "Tailwind",
-      "Laravel",
-      "Cypress",
-      "Docker",
-      "GitLab",
+    company: "Mediaflex",
+    location: { en: "Kraków", pl: "Kraków" },
+    role: { en: "Frontend Developer", pl: "Frontend Developer" },
+    start: "05.2022",
+    end: null,
+    description: {
+      en: "Product work on web applications — improving user experience, performance and code quality across the frontend.",
+      pl: "Praca produktowa nad aplikacjami webowymi — poprawa UX, wydajności i jakości kodu po stronie frontendu.",
+    },
+    highlights: [
+      {
+        en: "Rebuilt the registration / login module with multi-level validation and multiple sign-in methods, improving both security and convenience.",
+        pl: "Przebudowałem moduł rejestracji i logowania: wielopoziomowa walidacja i różne metody logowania — więcej bezpieczeństwa i wygody dla użytkowników.",
+      },
+      {
+        en: "Built a library of reusable Vue 3 + TypeScript components that sped up development and made the codebase easier to maintain.",
+        pl: "Stworzyłem bibliotekę reużywalnych komponentów Vue 3 + TypeScript, która przyspieszyła development i ułatwiła utrzymanie kodu.",
+      },
+      {
+        en: "Introduced Cypress integration and E2E tests running in GitLab CI/CD, with Docker for consistent environments.",
+        pl: "Wprowadziłem testy integracyjne i E2E w Cypress, uruchamiane w GitLab CI/CD, z Dockerem dla spójnych środowisk.",
+      },
+      {
+        en: "Improved load speed, accessibility and SEO by auditing and optimising pages with Google Lighthouse.",
+        pl: "Poprawiłem szybkość ładowania, dostępność i SEO, optymalizując strony na podstawie audytów Google Lighthouse.",
+      },
     ],
-    description:
-      "As a Frontend Developer, I focus on enhancing the user experience and optimizing web applications.",
     tasks: [
-      "Improved registration/login module with better authentication, multi-level validation, and support for various login methods, boosting security and user convenience.",
-      "Collaborated with the UX/UI team to implement a new, responsive landing page that improved user experience and conversion rates.",
-      "Optimized page performance using Google Lighthouse, improving load speed, accessibility, and SEO.",
-      "Developed a scalable consent management system with REST API and centralized database, integrating with microservices for real-time data analysis.",
-      "Created reusable Vue 3 components with TypeScript, improving development speed and code maintainability.",
-      "Implemented a PWA, enabling offline functionality with resource caching and Service Worker strategies.",
-      "Introduced automated integration and E2E tests in Cypress, integrated with CI/CD pipelines in GitLab, using Docker for environment consistency.",
+      {
+        en: "Developed a scalable consent management system with a REST API and a centralised database, integrated with microservices for real-time data analysis.",
+        pl: "Rozwijałem skalowalny system zarządzania zgodami z REST API i centralną bazą danych, zintegrowany z mikroserwisami do analizy danych w czasie rzeczywistym.",
+      },
+      {
+        en: "Implemented a PWA with offline support using resource caching and Service Worker strategies.",
+        pl: "Wdrożyłem PWA z obsługą trybu offline (cache zasobów i strategie Service Workera).",
+      },
+      {
+        en: "Worked with the UX/UI team on a new responsive landing page that improved user experience and conversion.",
+        pl: "Współpracowałem z zespołem UX/UI przy nowym, responsywnym landing page'u, który poprawił UX i konwersję.",
+      },
     ],
+    technologies: ["Vue 3", "TypeScript", "Pinia", "Vue Router", "Tailwind", "JavaScript", "jQuery", "Bootstrap", "Scss", "PHP", "Laravel", "Cypress", "Docker", "GitLab"],
   },
   {
-    company: "Vexperio.com, Remote",
-    period: "09.2024 - 02.2025",
-    technologies: [
-      "PHP",
-      "Laravel",
-      "Laravel Nova",
-      "MySQL",
-      "Vue.js",
-      "JavaScript",
-      "React",
+    company: "Vexperio.com",
+    location: { en: "Remote", pl: "Zdalnie" },
+    role: { en: "Fullstack Developer", pl: "Fullstack Developer" },
+    start: "09.2024",
+    end: "02.2025",
+    description: {
+      en: "Development, maintenance and optimisation of an e-commerce platform for booking tours.",
+      pl: "Rozwój, utrzymanie i optymalizacja platformy e-commerce do rezerwacji wycieczek.",
+    },
+    metric: {
+      value: "−25%",
+      label: { en: "page load time", pl: "czasu ładowania strony" },
+    },
+    highlights: [
+      {
+        en: "Cut page load time by over 25% by refactoring code and optimising SQL queries.",
+        pl: "Skróciłem czas ładowania stron o ponad 25% dzięki refaktoryzacji kodu i optymalizacji zapytań SQL.",
+      },
+      {
+        en: "Designed and built a new flow for searching, filtering and selecting tours that improved the user experience and sales conversion.",
+        pl: "Zaprojektowałem i wdrożyłem nowy proces wyszukiwania, filtrowania i wyboru wycieczek, który poprawił UX i konwersję sprzedaży.",
+      },
+      {
+        en: "Worked across backend and frontend, keeping the application maintainable and scalable.",
+        pl: "Pracowałem zarówno nad backendem, jak i frontendem, dbając o jakość i skalowalność aplikacji.",
+      },
     ],
-    description:
-      "I was responsible for the development, maintenance, and optimization of an e-commerce platform (online travel booking shop).",
-    tasks: [
-      "I optimized the application's performance by refactoring code and optimizing SQL queries, which reduced the page load time by over 25%.",
-      "I designed and implemented a new process for searching, filtering, and selecting tours, significantly improving the user experience and increasing sales conversion.",
-      "I worked on both the backend and frontend, ensuring code quality and the scalability of the application.",
-    ],
+    tasks: [],
+    technologies: ["Vue.js", "React", "JavaScript", "PHP", "Laravel", "Laravel Nova", "MySQL"],
   },
 ];
