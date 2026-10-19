@@ -40,28 +40,28 @@ export default {
   sections: {
     work: {
       eyebrow: "01 / Selected work",
-      title: "Projects with the story behind them",
-      description: "Client sites and side projects. Each one has a short case study: the problem, the decisions I made and the result.",
+      title: "Selected projects",
+      description: "Client websites and side projects. For each one I describe the goal, how I approached it and the result.",
     },
     experience: {
       eyebrow: "02 / Experience",
-      title: "Where I've made an impact",
-      description: "Commercial work in product teams and as a freelancer, in Vue, React and TypeScript, from architecture to deployment.",
+      title: "Work history",
+      description: "Work in product teams and as a freelancer, mainly with Vue, React and TypeScript.",
     },
     stack: {
       eyebrow: "03 / Stack",
-      title: "Tools I use to ship",
-      description: "Grouped by how often I actually use them, not by self-rated stars.",
+      title: "Technologies I work with",
+      description: "Grouped by how often I use them.",
     },
     about: {
       eyebrow: "04 / About",
-      title: "A bit more about me",
+      title: "A few words about me",
     },
     contact: {
       eyebrow: "05 / Contact",
-      title: "Let's build something good together.",
+      title: "Get in touch",
       description:
-        "Hiring for a frontend or full-stack role, or looking for someone to build your Vue, Nuxt or React project? I usually reply within 24 hours.",
+        "Looking for a frontend or full-stack developer, or someone for a Vue, Nuxt or React project? I usually reply within 24 hours.",
     },
   },
   work: {
@@ -130,8 +130,8 @@ export default {
     learnings: "What I learned",
     prev: "Previous",
     next: "Next",
-    ctaTitle: "Like what you see?",
-    ctaText: "I'm open to new roles and freelance projects. Let's talk about your team and product.",
+    ctaTitle: "Interested in working together?",
+    ctaText: "I'm open to new job offers and freelance projects.",
   },
   notFound: {
     title: "Page not found",

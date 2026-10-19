@@ -41,27 +41,27 @@ export default {
   sections: {
     work: {
       eyebrow: "01 / Wybrane projekty",
-      title: "Projekty, za którymi stoi historia",
-      description: "Strony dla klientów i projekty własne. Każdy ma krótkie case study: problem, moje decyzje i efekt.",
+      title: "Wybrane realizacje",
+      description: "Strony dla klientów i projekty własne. Przy każdym opisuję, jaki był cel, jak go zrealizowałem i z jakim efektem.",
     },
     experience: {
       eyebrow: "02 / Doświadczenie",
-      title: "Gdzie miałem realny wpływ",
-      description: "Komercyjna praca w zespołach produktowych i jako freelancer, w Vue, React i TypeScript, od architektury po wdrożenie.",
+      title: "Przebieg pracy",
+      description: "Praca w zespołach produktowych i jako freelancer, głównie w Vue, React i TypeScript.",
     },
     stack: {
       eyebrow: "03 / Stack",
-      title: "Narzędzia, którymi dowożę",
-      description: "Pogrupowane według tego, jak często naprawdę ich używam, a nie według gwiazdek z samooceny.",
+      title: "Technologie, z którymi pracuję",
+      description: "Podzielone według tego, jak często z nich korzystam.",
     },
     about: {
       eyebrow: "04 / O mnie",
-      title: "Trochę więcej o mnie",
+      title: "Kilka słów o mnie",
     },
     contact: {
       eyebrow: "05 / Kontakt",
-      title: "Zbudujmy razem coś dobrego.",
-      description: "Rekrutujesz na stanowisko frontendowe lub fullstackowe albo szukasz kogoś do projektu w Vue, Nuxt lub React? Zwykle odpowiadam w ciągu 24 godzin.",
+      title: "Napisz do mnie",
+      description: "Szukasz frontend lub fullstack developera albo kogoś do projektu w Vue, Nuxt lub React? Zwykle odpowiadam w ciągu 24 godzin.",
     },
   },
   work: {
@@ -130,8 +130,8 @@ export default {
     learnings: "Czego się nauczyłem",
     prev: "Poprzedni",
     next: "Następny",
-    ctaTitle: "Podoba Ci się to, co widzisz?",
-    ctaText: "Jestem otwarty na nowe oferty i projekty freelance. Porozmawiajmy o Twoim zespole i produkcie.",
+    ctaTitle: "Chcesz porozmawiać o współpracy?",
+    ctaText: "Jestem otwarty na nowe oferty pracy i projekty freelance.",
   },
   notFound: {
     title: "Nie znaleziono strony",
