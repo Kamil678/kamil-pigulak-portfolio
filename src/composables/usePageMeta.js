@@ -2,14 +2,13 @@ import { watchEffect } from "vue";
 import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { findProject } from "../data/projects";
-import { yearsOfExperience } from "../data/profile";
+import { PROFILE, yearsOfExperience } from "../data/profile";
 import { useLocalized } from "./useLocalized";
 
 function setMeta(selector, content) {
   document.querySelector(selector)?.setAttribute("content", content);
 }
 
-// Keeps <title> and description/OG meta in sync with the current route and language.
 export function usePageMeta() {
   const route = useRoute();
   const { t } = useI18n();
@@ -17,7 +16,10 @@ export function usePageMeta() {
 
   watchEffect(() => {
     let title = t("meta.homeTitle");
-    let description = t("meta.homeDescription", { years: yearsOfExperience() });
+    let description = t("meta.homeDescription", {
+      years: yearsOfExperience(),
+      since: new Date(PROFILE.careerStart).getFullYear(),
+    });
 
     if (route.name === "case-study") {
       const project = findProject(route.params.slug);

@@ -6,19 +6,19 @@
       <span class="h-2.5 w-2.5 rounded-full bg-[#28c840]" aria-hidden="true"></span>
       <span class="ml-2 font-mono text-xs text-white/50">kamil.ts</span>
     </div>
-    <!-- Decorative summary of the profile; the same facts are available as text in the other tiles. -->
     <pre
       class="flex-1 overflow-x-auto px-4 py-4 font-mono text-[0.75rem] leading-6 sm:text-[0.8rem]"
       aria-hidden="true"
     ><code><span class="tok-c">// quick facts for busy recruiters</span>
 <span class="tok-k">const</span> <span class="tok-v">kamil</span> = {
   <span class="tok-p">role</span>: <span class="tok-s">"Frontend Developer"</span>,
-  <span class="tok-p">stack</span>: [<span class="tok-s">"vue"</span>, <span class="tok-s">"react"</span>, <span class="tok-s">"ts"</span>],
-  <span class="tok-p">also</span>: [<span class="tok-s">"node"</span>, <span class="tok-s">"laravel"</span>, <span class="tok-s">"mysql"</span>],
-  <span class="tok-p">testing</span>: [<span class="tok-s">"cypress"</span>, <span class="tok-s">"e2e"</span>],
+  <span class="tok-p">stack</span>: [<span class="tok-s">"vue"</span>, <span class="tok-s">"react"</span>, <span class="tok-s">"ts"</span>, <span class="tok-s">"nuxt"</span>],
+  <span class="tok-p">also</span>: [<span class="tok-s">"php"</span>, <span class="tok-s">"symfony"</span>, <span class="tok-s">"laravel"</span>],
+  <span class="tok-p">testing</span>: [<span class="tok-s">"cypress"</span>, <span class="tok-s">"e2e"</span>, <span class="tok-s">"ci/cd"</span>],
   <span class="tok-p">focus</span>: [<span class="tok-s">"performance"</span>, <span class="tok-s">"a11y"</span>, <span class="tok-s">"ux"</span>],
+  <span class="tok-p">workflow</span>: <span class="tok-s">"ai-assisted"</span>,
   <span class="tok-p">experience</span>: <span class="tok-n">{{ years }}</span>, <span class="tok-c">// years</span>
-  <span class="tok-p">location</span>: <span class="tok-s">"Kraków area, PL"</span>,
+  <span class="tok-p">location</span>: <span class="tok-s">"Kraków, PL"</span>,
   <span class="tok-p">openToWork</span>: <span class="tok-n">{{ PROFILE.openToWork }}</span>,
 };
 

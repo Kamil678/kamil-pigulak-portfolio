@@ -7,14 +7,14 @@
         <div v-reveal>
           <div class="space-y-5 text-pretty text-lg leading-relaxed">
             <p v-for="(paragraph, index) in tm('about.paragraphs')" :key="index" :class="index > 0 && 'text-muted'">
-              {{ rt(paragraph) }}
+              {{ rt(paragraph, { since: careerStartYear }) }}
             </p>
           </div>
 
           <dl class="mt-10 grid grid-cols-2 gap-4">
             <div class="tile flex flex-col p-5">
               <dt class="text-sm text-muted">{{ t("about.statYears", years) }}</dt>
-              <dd class="order-first font-mono text-4xl font-medium">{{ years }}+</dd>
+              <dd class="order-first font-mono text-4xl font-medium">{{ num(years) }}</dd>
             </div>
             <div class="tile flex flex-col p-5">
               <dt class="text-sm text-muted">{{ t("about.statProjects") }}</dt>
@@ -58,7 +58,8 @@ import { useLocalized } from "../../composables/useLocalized";
 import SectionHeading from "../ui/SectionHeading.vue";
 
 const { t, tm, rt } = useI18n();
-const { l } = useLocalized();
+const { l, num } = useLocalized();
 
 const years = yearsOfExperience();
+const careerStartYear = new Date(PROFILE.careerStart).getFullYear();
 </script>

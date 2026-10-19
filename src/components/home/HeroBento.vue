@@ -43,16 +43,14 @@
         />
       </div>
 
-      <!-- Years -->
       <div class="tile col-span-1 flex animate-fade-up flex-col justify-between gap-6 p-6 [animation-delay:140ms]">
         <i class="bx bx-briefcase-alt-2 text-2xl text-accent" aria-hidden="true"></i>
         <p>
-          <span class="block font-mono text-5xl font-medium tracking-tight">{{ years }}+</span>
+          <span class="block font-mono text-5xl font-medium tracking-tight">{{ num(years) }}</span>
           <span class="mt-1 block text-sm text-muted">{{ t("hero.years", years) }}</span>
         </p>
       </div>
 
-      <!-- Location -->
       <div class="tile col-span-1 flex animate-fade-up flex-col justify-between gap-6 p-6 [animation-delay:200ms]">
         <i class="bx bx-map text-2xl text-accent" aria-hidden="true"></i>
         <p>
@@ -62,7 +60,6 @@
         </p>
       </div>
 
-      <!-- Stack -->
       <div
         class="tile col-span-2 flex animate-fade-up flex-col justify-between gap-6 p-6 [animation-delay:260ms] lg:col-start-1 lg:row-start-4"
       >
@@ -90,7 +87,6 @@
         </div>
       </div>
 
-      <!-- Code -->
       <div class="col-span-2 animate-fade-up [animation-delay:320ms] lg:col-start-3 lg:row-span-2 lg:row-start-3">
         <CodeCard />
       </div>
@@ -108,13 +104,11 @@ import AppButton from "../ui/AppButton.vue";
 import CodeCard from "./CodeCard.vue";
 
 const { t } = useI18n();
-const { l } = useLocalized();
+const { l, num } = useLocalized();
 const { goToSection } = useSectionNav();
 
 const years = yearsOfExperience();
-// Stack names in profile.js match skill names in skills.js, which hold the logos
 const skillIcon = Object.fromEntries(SKILL_CATEGORIES.flatMap((category) => category.skills).map((skill) => [skill.name, skill.icon]));
-// Served from public/ (unhashed) so index.html can preload it
 const photo800 = "/images/kp-photo-800.webp";
 const photo1400 = "/images/kp-photo-1400.webp";
 const careerStartYear = new Date(PROFILE.careerStart).getFullYear();

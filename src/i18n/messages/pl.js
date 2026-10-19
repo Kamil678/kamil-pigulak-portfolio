@@ -1,9 +1,9 @@
 export default {
   meta: {
-    homeTitle: "Kamil Pigulak — Frontend Developer (Vue i React)",
+    homeTitle: "Kamil Pigulak · Frontend Developer (Vue i React)",
     homeDescription:
-      "Frontend Developer z {years}+ latami komercyjnego doświadczenia. Tworzę szybkie i dostępne aplikacje webowe w Vue, React i TypeScript. Projekty, case studies i CV.",
-    caseStudyTitle: "{name} — Case study · Kamil Pigulak",
+      "Frontend Developer (Vue, React, TypeScript), komercyjnie od {since} roku. Tworzę nowoczesne, wydajne aplikacje i strony internetowe z dbałością o jakość kodu i UX. Projekty, case studies i CV.",
+    caseStudyTitle: "{name} · Case study · Kamil Pigulak",
     notFoundTitle: "Nie znaleziono strony · Kamil Pigulak",
   },
   a11y: {
@@ -25,13 +25,14 @@ export default {
     cv: "Pobierz CV",
   },
   hero: {
-    statusOpen: "Otwarty na nowe oferty",
+    statusOpen: "Otwarty na nowe oferty i freelance",
     statusClosed: "Obecnie nie szukam pracy",
     titleLead: "Frontend Developer",
-    titleRest: "tworzący szybkie i dostępne interfejsy w Vue i React.",
-    lead: "Od {since} roku dostarczam komercyjne produkty — od modułów logowania i PWA po platformę e-commerce do rezerwacji wycieczek. Swobodnie piszę w TypeScript, a dzięki Node.js i Laravelowi odnajduję się też po stronie backendu.",
+    titleRest: "tworzący nowoczesne i wydajne aplikacje w Vue i React.",
+    lead: "Tworzę nowoczesne, wydajne aplikacje i strony internetowe z dbałością o jakość kodu i UX: od PWA działających offline i paneli administracyjnych po systemy, z których korzysta wiele aplikacji naraz.",
     cta: "Napisz do mnie",
-    years: "rok komercyjnego doświadczenia | lata komercyjnego doświadczenia | lat komercyjnego doświadczenia",
+    years:
+      "rok komercyjnego doświadczenia | lata komercyjnego doświadczenia | lat komercyjnego doświadczenia | roku komercyjnego doświadczenia",
     location: "Lokalizacja",
     stack: "Główny stack",
     also: "także",
@@ -39,28 +40,28 @@ export default {
   },
   sections: {
     work: {
-      eyebrow: "01 — Wybrane projekty",
+      eyebrow: "01 / Wybrane projekty",
       title: "Projekty, za którymi stoi historia",
       description: "Strony dla klientów i projekty własne. Każdy ma krótkie case study: problem, moje decyzje i efekt.",
     },
     experience: {
-      eyebrow: "02 — Doświadczenie",
+      eyebrow: "02 / Doświadczenie",
       title: "Gdzie miałem realny wpływ",
-      description: "Komercyjna praca w zespołach produktowych i e-commerce, głównie w Vue i TypeScript.",
+      description: "Komercyjna praca w zespołach produktowych i jako freelancer, w Vue, React i TypeScript, od architektury po wdrożenie.",
     },
     stack: {
-      eyebrow: "03 — Stack",
+      eyebrow: "03 / Stack",
       title: "Narzędzia, którymi dowożę",
-      description: "Pogrupowane według tego, jak często naprawdę ich używam — a nie według gwiazdek z samooceny.",
+      description: "Pogrupowane według tego, jak często naprawdę ich używam, a nie według gwiazdek z samooceny.",
     },
     about: {
-      eyebrow: "04 — O mnie",
+      eyebrow: "04 / O mnie",
       title: "Trochę więcej o mnie",
     },
     contact: {
-      eyebrow: "05 — Kontakt",
+      eyebrow: "05 / Kontakt",
       title: "Zbudujmy razem coś dobrego.",
-      description: "Rekrutujesz na stanowisko frontendowe albo potrzebujesz wsparcia w projekcie Vue lub React? Zwykle odpowiadam w ciągu 24 godzin.",
+      description: "Rekrutujesz na stanowisko frontendowe lub fullstackowe albo szukasz kogoś do projektu w Vue, Nuxt lub React? Zwykle odpowiadam w ciągu 24 godzin.",
     },
   },
   work: {
@@ -89,11 +90,11 @@ export default {
   },
   about: {
     paragraphs: [
-      "Jestem frontend developerem z okolic Krakowa. Na studiach inżynierskich z Automatyki i Robotyki budowałem interfejsy do systemów sterowania — i odkryłem, że najbardziej lubię tę część, z którą ludzie faktycznie mają kontakt.",
-      "Od 2022 roku tworzę komercyjne produkty w Mediaflex, głównie w Vue 3 i TypeScript. Pracowałem też full-stackowo nad platformą e-commerce do rezerwacji wycieczek w Vexperio. Zależy mi na wydajności, dostępności i kodzie, z którym następna osoba w zespole będzie chciała pracować.",
-      "Po pracy najczęściej gram w piłkę nożną — to uczy rywalizacji i przypomina, że dobre wyniki biorą się z dobrej współpracy.",
+      "Od {since} roku pracuję komercyjnie jako Frontend Developer, zarówno w zespołach produktowych, jak i samodzielnie jako freelancer. Specjalizuję się w Vue 3, Nuxt i TypeScript, a w projektach komercyjnych równie pewnie pracuję w React.",
+      "Buduję aplikacje od architektury po implementację pixel-perfect: panele administracyjne, aplikacje PWA działające offline i systemy współdzielone przez wiele aplikacji. Przy własnych projektach biorę na siebie cały proces: od rozmowy z klientem i zebrania wymagań, przez projekt i kod, po wdrożenie, domenę i hosting.",
+      "Stawiam na czytelny kod, testy automatyczne, wydajność i dostępność (WCAG). Na co dzień pracuję z Claude Code, świadomie i krytycznie, bo odpowiedzialność za kod zawsze zostaje po mojej stronie. Rozwijam się w kierunku fullstacka (PHP/Symfony).",
     ],
-    statYears: "rok doświadczenia | lata doświadczenia | lat doświadczenia",
+    statYears: "rok doświadczenia | lata doświadczenia | lat doświadczenia | roku doświadczenia",
     statProjects: "zrealizowanych projektów",
     education: "Wykształcenie",
     courses: "Kursy",
@@ -110,7 +111,7 @@ export default {
       message: "Wiadomość",
       submit: "Wyślij wiadomość",
       sending: "Wysyłanie…",
-      success: "Dzięki! Wiadomość została wysłana — odezwę się wkrótce.",
+      success: "Dzięki! Wiadomość została wysłana, odezwę się wkrótce.",
       error: "Coś poszło nie tak. Napisz do mnie bezpośrednio na {email}.",
     },
     validation: {
@@ -130,7 +131,7 @@ export default {
     prev: "Poprzedni",
     next: "Następny",
     ctaTitle: "Podoba Ci się to, co widzisz?",
-    ctaText: "Jestem otwarty na nowe oferty. Porozmawiajmy o Twoim zespole i produkcie.",
+    ctaText: "Jestem otwarty na nowe oferty i projekty freelance. Porozmawiajmy o Twoim zespole i produkcie.",
   },
   notFound: {
     title: "Nie znaleziono strony",
