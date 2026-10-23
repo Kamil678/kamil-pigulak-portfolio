@@ -27,3 +27,7 @@ dist-ssr
 # Cypress
 cypress/screenshots
 cypress/videos
+
+# Local notes for Claude Code
+CLAUDE.md
+docs/

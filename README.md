@@ -1,90 +1,62 @@
-# 🌐 My Personal Portfolio  
-**Vue | JavaScript | TailwindCSS | Vite | SCSS**
+# Kamil Pigulak · Portfolio
 
-Welcome to the repository of my personal portfolio!  
-This website was built to showcase my skills, experience, and projects as a front-end developer. It is fully responsive, fast, and modern — created with clean code and attention to detail.
+[![CI](https://github.com/Kamil678/kamil-pigulak-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/Kamil678/kamil-pigulak-portfolio/actions/workflows/ci.yml)
 
----
+My personal website: **[kamilpigulak.com](https://kamilpigulak.com)**. Frontend Developer specialising in Vue 3, Nuxt and TypeScript.
 
-## 🚀 Tech Stack
+A bilingual (EN/PL) single-page app with project case studies, work history, tech stack and a contact form. It is small, but built the way I build production apps: content separated from components, automated tests, CI and attention to performance, accessibility and security.
 
-**Frontend**
-- Vue 3 (Composition API)
-- JavaScript (ES6+)
-- TailwindCSS
-- SCSS
-- Vite
-- HTML5
+## Tech stack
 
-**Tools / Workflow**
-- Git & GitHub
-- Responsive Design
-- Component-based architecture
+- **Vue 3** (Composition API, `<script setup>`), **Vue Router**, **vue-i18n**
+- **Vite 7**, **Tailwind CSS** with design tokens (CSS variables) and a dark mode
+- **Vitest** + Vue Test Utils for unit tests, **Cypress** for E2E tests
+- **ESLint** + **Prettier**, **GitHub Actions**, hosted on **Netlify**
+- **EmailJS** for the contact form (no backend)
 
----
+## Highlights
 
-## 🧭 Website Structure
+- **Content as data.** Projects, experience and skills live in `src/data/` as `{ en, pl }` objects; components only render them. Years of experience are calculated from the career start date, never hardcoded.
+- **i18n done properly.** Language detection (saved choice → browser), `<html lang>` kept in sync, a custom Polish plural rule (_rok / lata / lat_), and messages precompiled at build time, so the runtime ships without the message compiler.
+- **Performance.** Route-level code splitting, lazy-loaded EmailJS, responsive WebP images with `srcset`, a preloaded hero image, self-hosted variable fonts with a metric-matched fallback (less layout shift) and only the SVG icons that are actually used.
+- **Accessibility.** Semantic landmarks, skip link, visible focus styles, ARIA on interactive elements, accessible form validation (`aria-invalid`, `aria-describedby`, focus on the first error) and full support for `prefers-reduced-motion`.
+- **SEO.** Per-route title, description, canonical and Open Graph tags, JSON-LD (`Person`) and a sitemap generated from the project list on every build.
+- **Security.** Strict Content Security Policy (inline script allowed by hash, verified by a unit test), security headers, long-term caching of fingerprinted assets, and a honeypot against contact form spam.
 
-### 🏠 Home  
-A minimal hero section introducing who I am and connecting users with the rest of the website.
+## Getting started
 
-### 🙋 About  
-A section where I describe who I am, how I began my journey, and my approach to building digital products.  
-It also includes an overview of **my professional experience and educational background**, giving a clearer picture of my path as a developer.
-
-### 🛠 Skills  
-A list of the key technologies and tools I work with.
-
-### 💼 Projects  
-A showcase of my selected projects, including descriptions, tech stack details, and links (Live / GitHub).
-
-### ✉️ Contact  
-A simple way to reach me — including a contact form and social media links.
-
----
-
-## 📸 Screenshots  
-*(Optional — you may add screenshots here.)*
-
----
-
-## ⚙️ Running the Project Locally
+Requires Node.js 20.19+.
 
 ```bash
-# Clone the repository
-git clone https://github.com/<your_repo>.git
-
-# Install dependencies
 npm install
-
-# Development server
+cp .env.dist .env   # EmailJS credentials for the contact form
 npm run dev
+```
 
-# Production build
-npm run build
-````
+| Script                            | What it does                                             |
+| --------------------------------- | -------------------------------------------------------- |
+| `npm run dev`                     | Vite dev server                                          |
+| `npm run build`                   | Production build to `dist/`                              |
+| `npm run preview`                 | Serves the build with the production headers (incl. CSP) |
+| `npm run lint` / `lint:fix`       | ESLint                                                   |
+| `npm run format` / `format:check` | Prettier                                                 |
+| `npm test`                        | Unit tests (Vitest)                                      |
+| `npm run test:e2e`                | E2E tests (Cypress) against `vite preview`; build first  |
 
----
+## Project structure
 
-## 🎯 Project Purpose
+```
+src/
+├── components/   layout/ (header, footer), home/ (page sections), ui/ (shared primitives)
+├── composables/  page meta, section navigation, theme, contact form
+├── data/         content: profile, projects, experience, education, skills
+├── i18n/         vue-i18n setup and EN/PL messages
+├── router/       routes and scroll behaviour
+└── views/        home, case study, 404
+cypress/e2e/      end-to-end tests
+public/_headers   security and caching headers for Netlify
+```
 
-This portfolio was created to:
+## Contact
 
-* gather my skills and projects in one place,
-* present my coding style, UI/UX approach, and development workflow,
-* help recruiters and collaborators understand my experience,
-* serve as a foundation for future improvements and additions.
-
----
-
-## 🤝 Contact
-
-If you'd like to get in touch — feel free!
-
-📧 Email: [kamilpigulak@gmail.com](mailto:kamilpigulak@gmail.com)
-💼 LinkedIn: (https://www.linkedin.com/in/kamil-pigulak/)
-
----
-
-Thank you for visiting this repository, and I hope you enjoy exploring my project! 🚀
-
+[kamilpigulak@gmail.com](mailto:kamilpigulak@gmail.com) · [LinkedIn](https://www.linkedin.com/in/kamil-pigulak/)
