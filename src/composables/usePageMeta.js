@@ -5,6 +5,8 @@ import { findProject } from "../data/projects";
 import { PROFILE, yearsOfExperience } from "../data/profile";
 import { useLocalized } from "./useLocalized";
 
+const SITE_URL = "https://kamilpigulak.com";
+
 function setMeta(selector, content) {
   document.querySelector(selector)?.setAttribute("content", content);
 }
@@ -33,7 +35,11 @@ export function usePageMeta() {
       title = t("meta.notFoundTitle");
     }
 
+    const url = SITE_URL + route.path;
+
     document.title = title;
+    document.querySelector('link[rel="canonical"]')?.setAttribute("href", url);
+    setMeta('meta[property="og:url"]', url);
     setMeta('meta[name="description"]', description);
     setMeta('meta[property="og:title"]', title);
     setMeta('meta[property="og:description"]', description);
