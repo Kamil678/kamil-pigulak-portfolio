@@ -28,7 +28,7 @@
             :aria-label="`${t('work.live')}: ${project.name} (${t('a11y.newTab')})`"
             class="grid h-8 w-8 place-items-center rounded-full text-muted transition-colors hover:bg-surface-2 hover:text-text"
           >
-            <i class="bx bx-link-external text-lg" aria-hidden="true"></i>
+            <AppIcon name="bx-link-external" class="text-lg" />
           </a>
           <a
             v-if="project.linkGithub"
@@ -38,7 +38,7 @@
             :aria-label="`${t('work.code')}: ${project.name} (${t('a11y.newTab')})`"
             class="grid h-8 w-8 place-items-center rounded-full text-muted transition-colors hover:bg-surface-2 hover:text-text"
           >
-            <i class="bx bxl-github text-lg" aria-hidden="true"></i>
+            <AppIcon name="bxl-github" class="text-lg" />
           </a>
         </div>
       </div>
@@ -55,11 +55,13 @@
 
       <div class="mt-auto pt-6">
         <ul class="flex flex-wrap gap-1.5">
-          <li v-for="tech in project.techStack" :key="tech"><TechTag>{{ tech }}</TechTag></li>
+          <li v-for="tech in project.techStack" :key="tech">
+            <TechTag>{{ tech }}</TechTag>
+          </li>
         </ul>
         <p class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-accent" aria-hidden="true">
           {{ t("work.caseStudy") }}
-          <i class="bx bx-right-arrow-alt text-lg transition-transform group-hover:translate-x-1"></i>
+          <AppIcon name="bx-right-arrow-alt" class="text-lg transition-transform group-hover:translate-x-1" />
         </p>
       </div>
     </div>
@@ -69,6 +71,7 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 import { useLocalized } from "../../composables/useLocalized";
+import AppIcon from "../ui/AppIcon.vue";
 import TechTag from "../ui/TechTag.vue";
 
 defineProps({

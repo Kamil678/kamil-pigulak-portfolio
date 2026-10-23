@@ -1,5 +1,6 @@
 import { createApp } from "vue";
-import "boxicons/css/boxicons.min.css";
+import "@fontsource-variable/geist";
+import "@fontsource-variable/geist-mono";
 import "./style.css";
 import App from "./App.vue";
 import { router } from "./router";

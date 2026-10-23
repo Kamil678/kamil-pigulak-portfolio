@@ -20,7 +20,7 @@
 
       <ul class="mt-6 space-y-3">
         <li v-for="(item, index) in visibleItems" :key="index" class="flex gap-3 text-pretty">
-          <i class="bx bx-check flex h-6 shrink-0 items-center text-xl text-accent" aria-hidden="true"></i>
+          <span class="flex h-6 shrink-0 items-center text-xl text-accent"><AppIcon name="bx-check" /></span>
           <span>{{ l(item) }}</span>
         </li>
       </ul>
@@ -33,7 +33,7 @@
         @click="expanded = !expanded"
       >
         {{ expanded ? t("experience.showLess") : t("experience.showMore") }}
-        <i :class="['bx text-lg transition-transform', expanded ? 'bx-chevron-up' : 'bx-chevron-down']" aria-hidden="true"></i>
+        <AppIcon name="bx-chevron-down" class="text-lg transition-transform" :class="expanded && 'rotate-180'" />
       </button>
 
       <ul class="mt-6 flex flex-wrap gap-1.5 border-t border-border pt-6">
@@ -49,6 +49,7 @@
 import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useLocalized } from "../../composables/useLocalized";
+import AppIcon from "../ui/AppIcon.vue";
 import TechTag from "../ui/TechTag.vue";
 
 const props = defineProps({

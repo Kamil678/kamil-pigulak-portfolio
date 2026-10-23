@@ -1,7 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import CaseStudyView from "../views/CaseStudyView.vue";
-import NotFoundView from "../views/NotFoundView.vue";
 
 const HEADER_OFFSET = 80;
 const MAX_WAIT_FOR_TARGET_MS = 2000;
@@ -12,8 +10,8 @@ export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: "/", name: "home", component: HomeView },
-    { path: "/work/:slug", name: "case-study", component: CaseStudyView, props: true },
-    { path: "/:pathMatch(.*)*", name: "not-found", component: NotFoundView },
+    { path: "/work/:slug", name: "case-study", component: () => import("../views/CaseStudyView.vue"), props: true },
+    { path: "/:pathMatch(.*)*", name: "not-found", component: () => import("../views/NotFoundView.vue") },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) return savedPosition;

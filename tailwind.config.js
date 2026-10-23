@@ -22,8 +22,8 @@ export default {
         "accent-contrast": token("accent-contrast"),
       },
       fontFamily: {
-        sans: ["Geist", "Geist Fallback", "ui-sans-serif", "system-ui", "sans-serif"],
-        mono: ["Geist Mono", "ui-monospace", "SFMono-Regular", "monospace"],
+        sans: ["Geist Variable", "Geist Fallback", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["Geist Mono Variable", "ui-monospace", "SFMono-Regular", "monospace"],
       },
       letterSpacing: {
         tightest: "-0.04em",

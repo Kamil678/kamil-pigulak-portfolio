@@ -46,7 +46,7 @@
           aria-controls="mobile-menu"
           @click="isMenuOpen = !isMenuOpen"
         >
-          <i :class="['bx text-xl', isMenuOpen ? 'bx-x' : 'bx-menu']" aria-hidden="true"></i>
+          <AppIcon :name="isMenuOpen ? 'bx-x' : 'bx-menu'" class="text-xl" />
         </button>
       </div>
     </div>
@@ -87,6 +87,7 @@ import { useI18n } from "vue-i18n";
 import { PROFILE } from "../../data/profile";
 import { SECTIONS, useActiveSection, useSectionNav } from "../../composables/useSectionNav";
 import AppButton from "../ui/AppButton.vue";
+import AppIcon from "../ui/AppIcon.vue";
 import LangSwitch from "./LangSwitch.vue";
 import ThemeToggle from "./ThemeToggle.vue";
 
