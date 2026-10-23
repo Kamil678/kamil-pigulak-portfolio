@@ -5,13 +5,14 @@
     :aria-label="isDark ? t('a11y.themeToLight') : t('a11y.themeToDark')"
     @click="toggleTheme"
   >
-    <i :class="['bx text-lg', isDark ? 'bx-sun' : 'bx-moon']" aria-hidden="true"></i>
+    <AppIcon :name="isDark ? 'bx-sun' : 'bx-moon'" class="text-lg" />
   </button>
 </template>
 
 <script setup>
 import { useI18n } from "vue-i18n";
 import { useTheme } from "../../composables/useTheme";
+import AppIcon from "../ui/AppIcon.vue";
 
 const { t } = useI18n();
 const { isDark, toggleTheme } = useTheme();

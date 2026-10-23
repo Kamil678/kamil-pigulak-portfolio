@@ -9,7 +9,10 @@
         <p class="mt-5 max-w-md text-pretty text-lg text-muted">{{ t("sections.contact.description") }}</p>
 
         <div class="mt-8 flex flex-wrap items-center gap-3">
-          <a :href="`mailto:${PROFILE.email}`" class="font-mono text-lg underline decoration-accent/40 underline-offset-4 hover:decoration-accent">
+          <a
+            :href="`mailto:${PROFILE.email}`"
+            class="font-mono text-lg underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
+          >
             {{ PROFILE.email }}
           </a>
           <AppButton variant="secondary" size="sm" :icon="copied ? 'bx-check' : 'bx-copy'" @click="copyEmail">
@@ -21,21 +24,29 @@
         <ul class="mt-8 space-y-3 text-sm">
           <li>
             <a :href="`tel:${PROFILE.phone.replace(/\s/g, '')}`" class="inline-flex items-center gap-3 hover:text-accent">
-              <span class="grid h-9 w-9 place-items-center rounded-full border border-border"><i class="bx bx-phone text-lg" aria-hidden="true"></i></span>
-              <span><span class="text-muted">{{ t("contact.phone") }}:</span> {{ PROFILE.phone }}</span>
+              <span class="grid h-9 w-9 place-items-center rounded-full border border-border"
+                ><AppIcon name="bx-phone" class="text-lg"
+              /></span>
+              <span
+                ><span class="text-muted">{{ t("contact.phone") }}:</span> {{ PROFILE.phone }}</span
+              >
             </a>
           </li>
           <li v-for="social in PROFILE.socials" :key="social.name">
             <a :href="social.url" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 hover:text-accent">
-              <span class="grid h-9 w-9 place-items-center rounded-full border border-border"><i :class="['bx text-lg', social.icon]" aria-hidden="true"></i></span>
+              <span class="grid h-9 w-9 place-items-center rounded-full border border-border"
+                ><AppIcon :name="social.icon" class="text-lg"
+              /></span>
               {{ social.name }}
               <span class="sr-only">({{ t("a11y.newTab") }})</span>
-              <i class="bx bx-link-external text-muted" aria-hidden="true"></i>
+              <AppIcon name="bx-link-external" class="text-muted" />
             </a>
           </li>
           <li>
             <a :href="PROFILE.cvUrl" download class="inline-flex items-center gap-3 hover:text-accent">
-              <span class="grid h-9 w-9 place-items-center rounded-full border border-border"><i class="bx bx-file text-lg" aria-hidden="true"></i></span>
+              <span class="grid h-9 w-9 place-items-center rounded-full border border-border"
+                ><AppIcon name="bx-file" class="text-lg"
+              /></span>
               {{ t("nav.cv") }} <span class="font-mono text-xs text-muted">PDF</span>
             </a>
           </li>
@@ -52,6 +63,7 @@ import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { PROFILE } from "../../data/profile";
 import AppButton from "../ui/AppButton.vue";
+import AppIcon from "../ui/AppIcon.vue";
 import ContactForm from "./ContactForm.vue";
 
 const { t } = useI18n();

@@ -1,14 +1,15 @@
 <template>
   <component :is="tag" v-bind="linkAttrs" :class="classes">
-    <i v-if="icon" :class="['bx', icon, 'text-lg']" aria-hidden="true"></i>
+    <AppIcon v-if="icon" :name="icon" class="text-lg" />
     <slot />
-    <i v-if="iconRight" :class="['bx', iconRight, 'text-lg transition-transform group-hover:translate-x-0.5']" aria-hidden="true"></i>
+    <AppIcon v-if="iconRight" :name="iconRight" class="text-lg transition-transform group-hover:translate-x-0.5" />
   </component>
 </template>
 
 <script setup>
 import { computed } from "vue";
 import { RouterLink } from "vue-router";
+import AppIcon from "./AppIcon.vue";
 
 const props = defineProps({
   to: { type: [String, Object], default: null },
