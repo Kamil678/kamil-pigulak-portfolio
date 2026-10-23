@@ -12,13 +12,14 @@
     ><code><span class="tok-c">// quick facts for busy recruiters</span>
 <span class="tok-k">const</span> <span class="tok-v">kamil</span> = {
   <span class="tok-p">role</span>: <span class="tok-s">"Frontend Developer"</span>,
-  <span class="tok-p">stack</span>: [<span class="tok-s">"vue"</span>, <span class="tok-s">"react"</span>, <span class="tok-s">"ts"</span>, <span class="tok-s">"nuxt"</span>],
-  <span class="tok-p">also</span>: [<span class="tok-s">"php"</span>, <span class="tok-s">"symfony"</span>, <span class="tok-s">"laravel"</span>],
-  <span class="tok-p">testing</span>: [<span class="tok-s">"cypress"</span>, <span class="tok-s">"e2e"</span>, <span class="tok-s">"ci/cd"</span>],
-  <span class="tok-p">focus</span>: [<span class="tok-s">"performance"</span>, <span class="tok-s">"a11y"</span>, <span class="tok-s">"ux"</span>],
+  <span class="tok-p">stack</span>: [<span class="tok-s">"vue"</span>, <span class="tok-s">"nuxt"</span>, <span class="tok-s">"ts"</span>],
+  <span class="tok-p">also</span>: [<span class="tok-s">"react"</span>, <span class="tok-s">"php"</span>, <span class="tok-s">"laravel"</span>],
+  <span class="tok-p">shipped</span>: [<span class="tok-s">"monorepo"</span>, <span class="tok-s">"pwa"</span>, <span class="tok-s">"legacy migration"</span>],
+  <span class="tok-p">quality</span>: [<span class="tok-s">"cypress e2e"</span>, <span class="tok-s">"ci/cd"</span>, <span class="tok-s">"wcag 2.1 aa"</span>],
   <span class="tok-p">workflow</span>: <span class="tok-s">"ai-assisted"</span>,
   <span class="tok-p">experience</span>: <span class="tok-n">{{ years }}</span>, <span class="tok-c">// years</span>
   <span class="tok-p">location</span>: <span class="tok-s">"Kraków, PL"</span>,
+  <span class="tok-p">english</span>: <span class="tok-s">"B2"</span>,
   <span class="tok-p">openToWork</span>: <span class="tok-n">{{ PROFILE.openToWork }}</span>,
 };
 

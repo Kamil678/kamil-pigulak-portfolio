@@ -3,7 +3,17 @@
     <div class="container flex flex-col items-center justify-between gap-6 py-10 text-sm text-muted md:flex-row">
       <div class="text-center md:text-left">
         <p class="font-medium text-text">© {{ year }} {{ PROFILE.name }}</p>
-        <p class="mt-1">{{ t("footer.built") }}</p>
+        <p class="mt-1">
+          {{ t("footer.built") }}
+          <a
+            :href="PROFILE.repoUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline decoration-border underline-offset-4 hover:text-text"
+          >
+            {{ t("footer.source") }}<span class="sr-only"> ({{ t("a11y.newTab") }})</span>
+          </a>
+        </p>
       </div>
 
       <div class="flex items-center gap-2">
@@ -16,21 +26,21 @@
           :aria-label="`${social.name} (${t('a11y.newTab')})`"
           class="grid h-9 w-9 place-items-center rounded-full border border-border transition-colors hover:border-accent/50 hover:text-accent"
         >
-          <i :class="['bx text-lg', social.icon]" aria-hidden="true"></i>
+          <AppIcon :name="social.icon" class="text-lg" />
         </a>
         <a
           :href="`mailto:${PROFILE.email}`"
-          aria-label="Email"
+          :aria-label="t('a11y.email')"
           class="grid h-9 w-9 place-items-center rounded-full border border-border transition-colors hover:border-accent/50 hover:text-accent"
         >
-          <i class="bx bx-envelope text-lg" aria-hidden="true"></i>
+          <AppIcon name="bx-envelope" class="text-lg" />
         </a>
         <button
           type="button"
           class="ml-2 inline-flex items-center gap-1 font-mono text-xs uppercase tracking-wider hover:text-text"
           @click="scrollToTop"
         >
-          {{ t("footer.top") }} <i class="bx bx-up-arrow-alt text-base" aria-hidden="true"></i>
+          {{ t("footer.top") }} <AppIcon name="bx-up-arrow-alt" class="text-base" />
         </button>
       </div>
     </div>
@@ -40,6 +50,7 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 import { PROFILE } from "../../data/profile";
+import AppIcon from "../ui/AppIcon.vue";
 
 const { t } = useI18n();
 const year = new Date().getFullYear();

@@ -20,7 +20,7 @@
               class="inline-flex items-center gap-2 rounded-lg border px-2.5 py-1.5 text-sm"
               :class="skill.highlight ? 'border-accent/40 bg-accent/10 font-medium' : 'border-border bg-bg'"
             >
-              <img :src="skill.icon" alt="" width="18" height="18" loading="lazy" class="h-[18px] w-[18px]" />
+              <SkillIcon :skill="skill" class="h-[18px] w-[18px]" />
               {{ skill.name }}
             </li>
           </ul>
@@ -34,11 +34,10 @@
 import { useI18n } from "vue-i18n";
 import { SKILL_CATEGORIES, SKILL_TIERS } from "../../data/skills";
 import SectionHeading from "../ui/SectionHeading.vue";
+import SkillIcon from "../ui/SkillIcon.vue";
 
 const { t } = useI18n();
 
 const tiersOf = (category) =>
-  SKILL_TIERS.map((id) => ({ id, skills: category.skills.filter((skill) => skill.tier === id) })).filter(
-    (tier) => tier.skills.length,
-  );
+  SKILL_TIERS.map((id) => ({ id, skills: category.skills.filter((skill) => skill.tier === id) })).filter((tier) => tier.skills.length);
 </script>

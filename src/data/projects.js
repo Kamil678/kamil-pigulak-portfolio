@@ -96,8 +96,8 @@ export const PROJECTS = [
       "Cloudflare Pages",
     ],
     role: {
-      en: "Solo delivery: frontend, integrations, deployment and client communication",
-      pl: "Realizacja samodzielna: frontend, integracje, wdrożenie i współpraca z klientką",
+      en: "Solo, end to end: quote, contract, information architecture, frontend, integrations, deployment and hosting",
+      pl: "Realizacja samodzielna end-to-end: wycena, umowa, architektura informacji, frontend, integracje, wdrożenie i hosting",
     },
     outcome: {
       en: "A website for a new reformer pilates studio in Kraków, with class booking built right into the site.",

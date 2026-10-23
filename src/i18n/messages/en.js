@@ -1,8 +1,8 @@
 export default {
   meta: {
-    homeTitle: "Kamil Pigulak · Frontend Developer (Vue & React)",
+    homeTitle: "Kamil Pigulak · Frontend Developer (Vue, Nuxt, TypeScript)",
     homeDescription:
-      "Frontend Developer with {years} years of commercial experience building modern, high-performance web apps in Vue, React and TypeScript. Projects, case studies and CV.",
+      "Frontend Developer specialising in Vue 3, Nuxt and TypeScript, with {years} years of commercial experience. I also work with React and PHP. Projects, case studies and CV.",
     caseStudyTitle: "{name} · Case study · Kamil Pigulak",
     notFoundTitle: "Page not found · Kamil Pigulak",
   },
@@ -15,6 +15,7 @@ export default {
     themeToDark: "Switch to dark theme",
     language: "Language",
     newTab: "opens in a new tab",
+    email: "Email",
   },
   nav: {
     work: "Work",
@@ -28,8 +29,8 @@ export default {
     statusOpen: "Open to new roles & freelance",
     statusClosed: "Not looking right now",
     titleLead: "Frontend Developer",
-    titleRest: "building modern, high-performance apps in Vue & React.",
-    lead: "I build modern, high-performance web apps and websites with a focus on code quality and UX: from offline-first PWAs and admin panels to systems shared by many applications.",
+    titleRest: "specialising in Vue 3, Nuxt and TypeScript.",
+    lead: "I design and build web applications from architecture to deployment: monorepos with a shared component library, PWAs and zero-downtime migrations of legacy systems. I'm comfortable in React too.",
     cta: "Get in touch",
     years: "year of commercial experience | years of commercial experience",
     location: "Location",
@@ -46,7 +47,8 @@ export default {
     experience: {
       eyebrow: "02 / Experience",
       title: "Work history",
-      description: "Work in product teams and as a freelancer, mainly with Vue, React and TypeScript.",
+      description:
+        "A product team in the medical and pharmaceutical industry, plus freelance work. Mostly Vue 3, Nuxt and TypeScript, with React and PHP too.",
     },
     stack: {
       eyebrow: "03 / Stack",
@@ -90,14 +92,16 @@ export default {
   },
   about: {
     paragraphs: [
-      "I've been working commercially as a Frontend Developer since {since}, in product teams and on my own as a freelancer. I specialise in Vue 3, Nuxt and TypeScript, and I'm just as comfortable with React in commercial projects.",
-      "I build applications from architecture to pixel-perfect implementation: admin panels, offline-first PWAs and systems shared by many applications. On my own projects I own the whole process: from talking to the client and gathering requirements, through design and code, to deployment, domain and hosting.",
-      "I care about readable code, automated tests, performance and accessibility (WCAG). I work with Claude Code every day, deliberately and critically, because responsibility for the code always stays with me. I'm growing towards full-stack (PHP/Symfony).",
+      "I've been working commercially as a Frontend Developer since {since}: in a product team in the medical and pharmaceutical industry, and on my own as a freelancer. I specialise in Vue 3, Nuxt and TypeScript. I design applications from architecture to deployment and make technical decisions on my own.",
+      "I've designed a monorepo with a shared component library, built PWAs and led a step-by-step, zero-downtime migration of a legacy system. I care about quality: E2E tests in CI/CD, consistent design systems and WCAG 2.1 AA accessibility. On client projects I own the whole process, from the quote and requirements to deployment and hosting.",
+      "I don't tie myself to one framework. I've also worked commercially with React, and I carry patterns across ecosystems: composables and custom hooks, Pinia and Redux, Vue Router and React Router solve the same problems. So on a new project what matters to me is the architecture, not the library.",
+      "I also have full-stack experience in PHP (Laravel, Laminas). I use Claude Code every day, deliberately: I review every change, because responsibility for the code stays with me.",
     ],
     statYears: "year of experience | years of experience",
     statProjects: "projects delivered",
     education: "Education",
     courses: "Courses",
+    languages: "Languages",
   },
   contact: {
     copyEmail: "Copy email",
@@ -113,6 +117,8 @@ export default {
       sending: "Sending…",
       success: "Thanks! Your message is on its way. I'll get back to you soon.",
       error: "Something went wrong. Please email me directly at {email}.",
+      privacy: "I'll use the data from this form only to reply to your message.",
+      honeypot: "Leave this field empty",
     },
     validation: {
       required: "This field is required",
@@ -128,6 +134,7 @@ export default {
     approach: "Approach & key decisions",
     results: "Results",
     learnings: "What I learned",
+    screenshot: "{name} screenshot",
     prev: "Previous",
     next: "Next",
     ctaTitle: "Interested in working together?",
@@ -140,6 +147,7 @@ export default {
   },
   footer: {
     built: "Designed & built with Vue 3 and Tailwind CSS.",
+    source: "Source code",
     top: "Back to top",
   },
 };

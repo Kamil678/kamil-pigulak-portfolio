@@ -27,7 +27,9 @@
           <article v-for="school in EDUCATION" :key="l(school.institution)" class="tile p-6">
             <p class="eyebrow">{{ t("about.education") }}</p>
             <h3 class="mt-3 text-lg font-semibold">{{ l(school.degree) }}</h3>
-            <p class="text-muted">{{ l(school.institution) }} · <span class="font-mono text-sm">{{ school.period }}</span></p>
+            <p class="text-muted">
+              {{ l(school.institution) }} · <span class="font-mono text-sm">{{ school.period }}</span>
+            </p>
             <p class="mt-1 text-sm text-muted">{{ l(school.field) }}</p>
             <p class="mt-4 text-pretty text-sm leading-relaxed">{{ l(school.description) }}</p>
           </article>
@@ -41,6 +43,16 @@
                   <p class="text-xs text-muted">{{ course.issuer }}</p>
                 </div>
                 <span class="font-mono text-xs text-muted">{{ course.year }}</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="tile p-6">
+            <p class="eyebrow">{{ t("about.languages") }}</p>
+            <ul class="mt-3 flex flex-wrap gap-x-6 gap-y-2">
+              <li v-for="language in PROFILE.languages" :key="language.name.en" class="text-sm">
+                <span class="font-medium">{{ l(language.name) }}</span>
+                <span class="text-muted"> · {{ l(language.level) }}</span>
               </li>
             </ul>
           </article>

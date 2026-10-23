@@ -7,7 +7,7 @@
         :to="{ name: 'home', hash: '#work' }"
         class="inline-flex items-center gap-1 text-sm text-muted transition-colors hover:text-text"
       >
-        <i class="bx bx-left-arrow-alt text-lg" aria-hidden="true"></i>{{ t("caseStudy.back") }}
+        <AppIcon name="bx-left-arrow-alt" class="text-lg" />{{ t("caseStudy.back") }}
       </RouterLink>
 
       <header class="mt-8 max-w-3xl">
@@ -44,7 +44,7 @@
           :src="project.cover.src"
           :srcset="project.cover.srcset"
           sizes="(min-width: 1248px) 1200px, 100vw"
-          :alt="`${project.name} screenshot`"
+          :alt="t('caseStudy.screenshot', { name: project.name })"
           :width="project.cover.width"
           :height="project.cover.height"
           class="h-auto w-full"
@@ -71,7 +71,7 @@
           <h2 id="cs-results" class="eyebrow">{{ t("caseStudy.results") }}</h2>
           <ul class="mt-6 space-y-3">
             <li v-for="(result, index) in project.caseStudy.results" :key="index" class="flex gap-3 text-lg">
-              <i class="bx bx-check flex h-7 shrink-0 items-center text-xl text-accent" aria-hidden="true"></i>
+              <span class="flex h-7 shrink-0 items-center text-xl text-accent"><AppIcon name="bx-check" /></span>
               <span class="text-pretty">{{ l(result) }}</span>
             </li>
           </ul>
@@ -79,7 +79,7 @@
 
         <section v-if="project.caseStudy.learnings" v-reveal aria-labelledby="cs-learnings">
           <h2 id="cs-learnings" class="eyebrow">{{ t("caseStudy.learnings") }}</h2>
-          <blockquote class="mt-4 border-l-2 border-accent pl-5 text-pretty text-xl italic leading-relaxed text-muted">
+          <blockquote class="mt-4 text-pretty border-l-2 border-accent pl-5 text-xl italic leading-relaxed text-muted">
             {{ l(project.caseStudy.learnings) }}
           </blockquote>
         </section>
@@ -119,6 +119,7 @@ import { PROJECTS, findProject } from "../data/projects";
 import { PROFILE } from "../data/profile";
 import { useLocalized } from "../composables/useLocalized";
 import AppButton from "../components/ui/AppButton.vue";
+import AppIcon from "../components/ui/AppIcon.vue";
 import TechTag from "../components/ui/TechTag.vue";
 import NotFoundView from "./NotFoundView.vue";
 
