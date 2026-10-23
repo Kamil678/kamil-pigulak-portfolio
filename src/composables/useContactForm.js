@@ -12,7 +12,6 @@ export function useContactForm() {
   const form = reactive({ name: "", email: "", subject: "", message: "" });
   const errors = reactive({ name: "", email: "", subject: "", message: "" });
   const status = ref("idle");
-  // Hidden from people; bots that fill every field reveal themselves here.
   const honeypot = ref("");
 
   const reset = () => {
