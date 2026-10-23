@@ -1,8 +1,8 @@
 export default {
   meta: {
-    homeTitle: "Kamil Pigulak · Frontend Developer (Vue i React)",
+    homeTitle: "Kamil Pigulak · Frontend Developer (Vue, Nuxt, TypeScript)",
     homeDescription:
-      "Frontend Developer (Vue, React, TypeScript), komercyjnie od {since} roku. Tworzę nowoczesne, wydajne aplikacje i strony internetowe z dbałością o jakość kodu i UX. Projekty, case studies i CV.",
+      "Frontend Developer specjalizujący się w Vue 3, Nuxt i TypeScript, komercyjnie od {since} roku. Pracuję też w React i PHP. Projekty, case studies i CV.",
     caseStudyTitle: "{name} · Case study · Kamil Pigulak",
     notFoundTitle: "Nie znaleziono strony · Kamil Pigulak",
   },
@@ -15,6 +15,7 @@ export default {
     themeToDark: "Włącz ciemny motyw",
     language: "Język",
     newTab: "otwiera się w nowej karcie",
+    email: "E-mail",
   },
   nav: {
     work: "Projekty",
@@ -28,8 +29,8 @@ export default {
     statusOpen: "Otwarty na nowe oferty i freelance",
     statusClosed: "Obecnie nie szukam pracy",
     titleLead: "Frontend Developer",
-    titleRest: "tworzący nowoczesne i wydajne aplikacje w Vue i React.",
-    lead: "Tworzę nowoczesne, wydajne aplikacje i strony internetowe z dbałością o jakość kodu i UX: od PWA działających offline i paneli administracyjnych po systemy, z których korzysta wiele aplikacji naraz.",
+    titleRest: "specjalizujący się w Vue 3, Nuxt i TypeScript.",
+    lead: "Projektuję i rozwijam aplikacje webowe od architektury po wdrożenie: monorepo ze współdzieloną biblioteką komponentów, aplikacje PWA i migracje systemów legacy bez przestojów. Swobodnie pracuję też w React.",
     cta: "Napisz do mnie",
     years:
       "rok komercyjnego doświadczenia | lata komercyjnego doświadczenia | lat komercyjnego doświadczenia | roku komercyjnego doświadczenia",
@@ -47,7 +48,8 @@ export default {
     experience: {
       eyebrow: "02 / Doświadczenie",
       title: "Przebieg pracy",
-      description: "Praca w zespołach produktowych i jako freelancer, głównie w Vue, React i TypeScript.",
+      description:
+        "Zespół produktowy w branży medycznej i farmaceutycznej oraz projekty freelance. Głównie Vue 3, Nuxt i TypeScript, a także React i PHP.",
     },
     stack: {
       eyebrow: "03 / Stack",
@@ -61,7 +63,8 @@ export default {
     contact: {
       eyebrow: "05 / Kontakt",
       title: "Napisz do mnie",
-      description: "Szukasz frontend lub fullstack developera albo kogoś do projektu w Vue, Nuxt lub React? Zwykle odpowiadam w ciągu 24 godzin.",
+      description:
+        "Szukasz frontend lub fullstack developera albo kogoś do projektu w Vue, Nuxt lub React? Zwykle odpowiadam w ciągu 24 godzin.",
     },
   },
   work: {
@@ -90,14 +93,16 @@ export default {
   },
   about: {
     paragraphs: [
-      "Od {since} roku pracuję komercyjnie jako Frontend Developer, zarówno w zespołach produktowych, jak i samodzielnie jako freelancer. Specjalizuję się w Vue 3, Nuxt i TypeScript, a w projektach komercyjnych równie pewnie pracuję w React.",
-      "Buduję aplikacje od architektury po implementację pixel-perfect: panele administracyjne, aplikacje PWA działające offline i systemy współdzielone przez wiele aplikacji. Przy własnych projektach biorę na siebie cały proces: od rozmowy z klientem i zebrania wymagań, przez projekt i kod, po wdrożenie, domenę i hosting.",
-      "Stawiam na czytelny kod, testy automatyczne, wydajność i dostępność (WCAG). Na co dzień pracuję z Claude Code, świadomie i krytycznie, bo odpowiedzialność za kod zawsze zostaje po mojej stronie. Rozwijam się w kierunku fullstacka (PHP/Symfony).",
+      "Od {since} roku pracuję komercyjnie jako Frontend Developer: w zespole produktowym w branży medycznej i farmaceutycznej oraz samodzielnie jako freelancer. Specjalizuję się w Vue 3, Nuxt i TypeScript. Projektuję aplikacje od architektury po wdrożenie i samodzielnie podejmuję decyzje techniczne.",
+      "Projektowałem monorepo ze współdzieloną biblioteką komponentów, tworzyłem aplikacje PWA i prowadziłem stopniową migrację systemu legacy bez przestojów. Dbam o jakość: testy E2E w CI/CD, spójne design systemy i dostępność zgodną z WCAG 2.1 AA. Przy projektach dla klientów biorę na siebie cały proces, od wyceny i wymagań po wdrożenie i hosting.",
+      "Nie zamykam się na jeden framework. Komercyjnie pracowałem też w React, a wzorce przenoszę między ekosystemami: composables i custom hooki, Pinia i Redux, Vue Router i React Router rozwiązują te same problemy. Dlatego w nowym projekcie liczy się dla mnie architektura, a nie sama biblioteka.",
+      "Mam też doświadczenie full-stack w PHP (Laravel, Laminas). Na co dzień pracuję z Claude Code, ale świadomie: każdą zmianę weryfikuję, bo odpowiedzialność za kod zostaje po mojej stronie.",
     ],
     statYears: "rok doświadczenia | lata doświadczenia | lat doświadczenia | roku doświadczenia",
     statProjects: "zrealizowanych projektów",
     education: "Wykształcenie",
     courses: "Kursy",
+    languages: "Języki",
   },
   contact: {
     copyEmail: "Kopiuj e-mail",
@@ -113,6 +118,8 @@ export default {
       sending: "Wysyłanie…",
       success: "Dzięki! Wiadomość została wysłana, odezwę się wkrótce.",
       error: "Coś poszło nie tak. Napisz do mnie bezpośrednio na {email}.",
+      privacy: "Dane z formularza wykorzystam wyłącznie do odpowiedzi na Twoją wiadomość.",
+      honeypot: "Zostaw to pole puste",
     },
     validation: {
       required: "To pole jest wymagane",
@@ -128,6 +135,7 @@ export default {
     approach: "Podejście i kluczowe decyzje",
     results: "Efekty",
     learnings: "Czego się nauczyłem",
+    screenshot: "Zrzut ekranu projektu {name}",
     prev: "Poprzedni",
     next: "Następny",
     ctaTitle: "Chcesz porozmawiać o współpracy?",
@@ -140,6 +148,7 @@ export default {
   },
   footer: {
     built: "Zaprojektowane i zbudowane w Vue 3 i Tailwind CSS.",
+    source: "Kod źródłowy strony",
     top: "Do góry",
   },
 };

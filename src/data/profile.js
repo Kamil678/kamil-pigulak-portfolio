@@ -8,9 +8,14 @@ export const PROFILE = {
   location: { en: "Kraków, Poland", pl: "Kraków" },
   workMode: { en: "Hybrid or remote", pl: "Hybrydowo lub zdalnie" },
   cvUrl: "/cv/Kamil-Pigulak-CV.pdf",
+  repoUrl: "https://github.com/Kamil678/kamil-pigulak-portfolio",
   projectsCount: 15,
-  coreStack: ["Vue", "React", "TypeScript", "JavaScript"],
-  alsoStack: ["Nuxt", "Tailwind", "PHP", "Symfony"],
+  coreStack: ["Vue", "Nuxt", "TypeScript", "React"],
+  alsoStack: ["Tailwind", "Cypress", "PHP", "Laravel"],
+  languages: [
+    { name: { en: "Polish", pl: "polski" }, level: { en: "native", pl: "ojczysty" } },
+    { name: { en: "English", pl: "angielski" }, level: { en: "B2", pl: "B2" } },
+  ],
   socials: [
     { name: "LinkedIn", url: "https://www.linkedin.com/in/kamil-pigulak/", icon: "bxl-linkedin" },
     { name: "GitHub", url: "https://github.com/Kamil678", icon: "bxl-github" },

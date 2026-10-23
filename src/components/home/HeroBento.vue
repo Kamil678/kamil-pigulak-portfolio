@@ -44,7 +44,7 @@
       </div>
 
       <div class="tile col-span-1 flex animate-fade-up flex-col justify-between gap-6 p-6 [animation-delay:140ms]">
-        <i class="bx bx-briefcase-alt-2 text-2xl text-accent" aria-hidden="true"></i>
+        <AppIcon name="bx-briefcase-alt-2" class="text-2xl text-accent" />
         <p>
           <span class="block font-mono text-5xl font-medium tracking-tight">{{ num(years) }}</span>
           <span class="mt-1 block text-sm text-muted">{{ t("hero.years", years) }}</span>
@@ -52,7 +52,7 @@
       </div>
 
       <div class="tile col-span-1 flex animate-fade-up flex-col justify-between gap-6 p-6 [animation-delay:200ms]">
-        <i class="bx bx-map text-2xl text-accent" aria-hidden="true"></i>
+        <AppIcon name="bx-map" class="text-2xl text-accent" />
         <p>
           <span class="block font-mono text-xs uppercase tracking-wider text-muted">{{ t("hero.location") }}</span>
           <span class="mt-1 block font-medium">{{ l(PROFILE.location) }}</span>
@@ -72,7 +72,7 @@
               class="flex items-center gap-2.5 rounded-xl border border-border bg-bg py-2 pl-2 pr-3.5 transition-colors hover:border-accent/40"
             >
               <span class="grid h-8 w-8 place-items-center rounded-lg bg-surface-2">
-                <img :src="skillIcon[tech]" alt="" width="20" height="20" class="h-5 w-5" />
+                <SkillIcon :skill="findSkill(tech)" :size="20" class="h-5 w-5" />
               </span>
               <span class="text-[0.95rem] font-semibold tracking-tight">{{ tech }}</span>
             </li>
@@ -80,7 +80,7 @@
           <div class="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-dashed border-border pt-4 text-sm">
             <span class="font-mono text-xs uppercase tracking-wider text-muted">+ {{ t("hero.also") }}</span>
             <span v-for="tech in PROFILE.alsoStack" :key="tech" class="inline-flex items-center gap-1.5 text-muted">
-              <img :src="skillIcon[tech]" alt="" width="16" height="16" class="h-4 w-4" />
+              <SkillIcon :skill="findSkill(tech)" :size="16" class="h-4 w-4" />
               {{ tech }}
             </span>
           </div>
@@ -97,10 +97,12 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 import { PROFILE, yearsOfExperience } from "../../data/profile";
-import { SKILL_CATEGORIES } from "../../data/skills";
+import { findSkill } from "../../data/skills";
 import { useLocalized } from "../../composables/useLocalized";
 import { useSectionNav } from "../../composables/useSectionNav";
 import AppButton from "../ui/AppButton.vue";
+import AppIcon from "../ui/AppIcon.vue";
+import SkillIcon from "../ui/SkillIcon.vue";
 import CodeCard from "./CodeCard.vue";
 
 const { t } = useI18n();
@@ -108,7 +110,6 @@ const { l, num } = useLocalized();
 const { goToSection } = useSectionNav();
 
 const years = yearsOfExperience();
-const skillIcon = Object.fromEntries(SKILL_CATEGORIES.flatMap((category) => category.skills).map((skill) => [skill.name, skill.icon]));
 const photo800 = "/images/kp-photo-800.webp";
 const photo1400 = "/images/kp-photo-1400.webp";
 const careerStartYear = new Date(PROFILE.careerStart).getFullYear();
