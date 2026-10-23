@@ -9,6 +9,7 @@
       :rows="multiline ? rows : undefined"
       :value="modelValue"
       :autocomplete="autocomplete"
+      :maxlength="maxlength"
       :aria-invalid="!!error"
       :aria-describedby="error ? `${id}-error` : undefined"
       class="w-full rounded-xl border bg-bg px-4 py-3 text-[0.95rem] text-text transition-colors placeholder:text-muted/70 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/25 focus-visible:ring-offset-0"
@@ -17,12 +18,13 @@
       @blur="$emit('blur')"
     />
     <p v-if="error" :id="`${id}-error`" class="flex items-center gap-1 text-sm text-red-600 dark:text-red-400">
-      <i class="bx bx-error-circle" aria-hidden="true"></i>{{ error }}
+      <AppIcon name="bx-error-circle" />{{ error }}
     </p>
   </div>
 </template>
 
 <script setup>
+import AppIcon from "./AppIcon.vue";
 defineProps({
   id: { type: String, required: true },
   name: { type: String, required: true },
@@ -32,6 +34,7 @@ defineProps({
   multiline: { type: Boolean, default: false },
   rows: { type: Number, default: 5 },
   autocomplete: { type: String, default: undefined },
+  maxlength: { type: Number, default: undefined },
   error: { type: String, default: "" },
 });
 

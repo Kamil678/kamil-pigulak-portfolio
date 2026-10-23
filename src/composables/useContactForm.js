@@ -1,5 +1,4 @@
 import { reactive, ref } from "vue";
-import emailjs from "@emailjs/browser";
 
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -7,11 +6,21 @@ const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const FIELDS = ["name", "email", "subject", "message"];
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+export const MAX_LENGTH = { name: 100, email: 254, subject: 150, message: 5000 };
 
 export function useContactForm() {
   const form = reactive({ name: "", email: "", subject: "", message: "" });
   const errors = reactive({ name: "", email: "", subject: "", message: "" });
   const status = ref("idle");
+  // Hidden from people; bots that fill every field reveal themselves here.
+  const honeypot = ref("");
+
+  const reset = () => {
+    FIELDS.forEach((field) => {
+      form[field] = "";
+      errors[field] = "";
+    });
+  };
 
   const validateField = (field) => {
     const value = form[field].trim();
@@ -32,6 +41,12 @@ export function useContactForm() {
       return;
     }
 
+    if (honeypot.value) {
+      status.value = "success";
+      reset();
+      return;
+    }
+
     if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
       console.error("Missing EmailJS configuration");
       status.value = "error";
@@ -40,6 +55,7 @@ export function useContactForm() {
 
     status.value = "sending";
     try {
+      const { default: emailjs } = await import("@emailjs/browser");
       await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
@@ -47,15 +63,12 @@ export function useContactForm() {
         EMAILJS_PUBLIC_KEY,
       );
       status.value = "success";
-      FIELDS.forEach((field) => {
-        form[field] = "";
-        errors[field] = "";
-      });
+      reset();
     } catch (error) {
       console.error("Error sending email:", error);
       status.value = "error";
     }
   };
 
-  return { form, errors, status, validateField, revalidateIfInvalid, submit };
+  return { form, errors, status, honeypot, validateField, revalidateIfInvalid, submit };
 }
