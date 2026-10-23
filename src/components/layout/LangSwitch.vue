@@ -1,5 +1,9 @@
 <template>
-  <div role="group" :aria-label="t('a11y.language')" class="flex items-center rounded-full border border-border bg-surface p-0.5 font-mono text-xs">
+  <div
+    role="group"
+    :aria-label="t('a11y.language')"
+    class="flex items-center rounded-full border border-border bg-surface p-0.5 font-mono text-xs"
+  >
     <button
       v-for="code in LOCALES"
       :key="code"
