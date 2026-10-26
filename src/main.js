@@ -1,12 +1,10 @@
 import { createApp } from "vue";
-import { createPinia } from "pinia";
-import "boxicons/css/boxicons.min.css";
+import "@fontsource-variable/geist";
+import "@fontsource-variable/geist-mono";
 import "./style.css";
-import "./assets/styles/main.scss";
 import App from "./App.vue";
+import { router } from "./router";
+import { i18n } from "./i18n";
+import { reveal } from "./directives/reveal";
 
-const pinia = createPinia();
-const app = createApp(App);
-
-app.use(pinia);
-app.mount("#app");
+createApp(App).use(router).use(i18n).directive("reveal", reveal).mount("#app");

@@ -23,3 +23,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Cypress
+cypress/screenshots
+cypress/videos
+
+# Local notes for Claude Code
+CLAUDE.md
+docs/
