@@ -2,25 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kamil Pigulak · Frontend Developer (Vue, Nuxt, TypeScript)</title>
     <meta
       name="description"
-      content="Frontend developer portfolio - modern web applications in Vue, React and JavaScript. See my projects and skills."
+      content="Frontend Developer specialising in Vue 3, Nuxt and TypeScript, working commercially since 2022. I also work with React and PHP. Projects, case studies and CV."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)" />
+
+    <link rel="canonical" href="https://kamilpigulak.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kamilpigulak.com/" />
+    <meta property="og:site_name" content="Kamil Pigulak" />
+    <meta property="og:title" content="Kamil Pigulak · Frontend Developer (Vue, Nuxt, TypeScript)" />
+    <meta
+      property="og:description"
+      content="Frontend Developer specialising in Vue 3, Nuxt and TypeScript, working commercially since 2022. I also work with React and PHP. Projects, case studies and CV."
+    />
+    <meta property="og:image" content="https://kamilpigulak.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Kamil Pigulak, Frontend Developer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://kamilpigulak.com/og-image.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kamil Pigulak",
+        "jobTitle": "Frontend Developer",
+        "url": "https://kamilpigulak.com/",
+        "image": "https://kamilpigulak.com/og-image.jpg",
+        "email": "mailto:kamilpigulak@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Kraków", "addressCountry": "PL" },
+        "knowsAbout": [
+          "Vue.js",
+          "Nuxt",
+          "TypeScript",
+          "JavaScript",
+          "React",
+          "Pinia",
+          "Tailwind CSS",
+          "Cypress",
+          "PWA",
+          "Web accessibility",
+          "PHP",
+          "Laravel"
+        ],
+        "worksFor": { "@type": "Organization", "name": "Mediaflex" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Cracow University of Technology" },
+        "sameAs": ["https://www.linkedin.com/in/kamil-pigulak/", "https://github.com/Kamil678"]
+      }
+    </script>
+
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("darkMode");
+          var dark = saved !== null ? JSON.parse(saved) : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.classList.toggle("dark", dark);
+          var locale = localStorage.getItem("locale") || (navigator.language || "en").slice(0, 2);
+          document.documentElement.lang = locale === "pl" ? "pl" : "en";
+        } catch (e) {}
+      })();
+    </script>
+
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      as="style"
-      onload="
-        this.onload = null;
-        this.rel = 'stylesheet';
-      "
+      as="image"
+      href="/images/kp-photo-800.webp"
+      imagesrcset="/images/kp-photo-800.webp 800w, /images/kp-photo-1400.webp 1400w"
+      imagesizes="(min-width: 1024px) 600px, 100vw"
+      fetchpriority="high"
     />
-
-    <title>Kamil Pigulak | Frontend Developer</title>
   </head>
   <body>
     <div id="app"></div>
