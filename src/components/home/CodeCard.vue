@@ -12,8 +12,8 @@
     ><code><span class="tok-c">// quick facts for busy recruiters</span>
 <span class="tok-k">const</span> <span class="tok-v">kamil</span> = {
   <span class="tok-p">role</span>: <span class="tok-s">"Frontend Developer"</span>,
-  <span class="tok-p">stack</span>: [<span class="tok-s">"vue"</span>, <span class="tok-s">"nuxt"</span>, <span class="tok-s">"ts"</span>],
-  <span class="tok-p">also</span>: [<span class="tok-s">"react"</span>, <span class="tok-s">"php"</span>, <span class="tok-s">"laravel"</span>],
+  <span class="tok-p">stack</span>: [<span class="tok-s">"vue"</span>, <span class="tok-s">"nuxt"</span>, <span class="tok-s">"ts"</span>, <span class="tok-s">"react"</span>],
+  <span class="tok-p">also</span>: [<span class="tok-s">"php"</span>],
   <span class="tok-p">shipped</span>: [<span class="tok-s">"monorepo"</span>, <span class="tok-s">"pwa"</span>, <span class="tok-s">"legacy migration"</span>],
   <span class="tok-p">quality</span>: [<span class="tok-s">"cypress e2e"</span>, <span class="tok-s">"ci/cd"</span>, <span class="tok-s">"wcag 2.1 aa"</span>],
   <span class="tok-p">workflow</span>: <span class="tok-s">"ai-assisted"</span>,

@@ -6,8 +6,8 @@ export const EXPERIENCES = [
     start: "05.2022",
     end: null,
     description: {
-      en: "Web applications for the medical and pharmaceutical industry: a platform used by over ten thousand doctors, an admin panel with a PWA, an enterprise conference management system and a consent system shared by 5 applications.",
-      pl: "Aplikacje webowe dla branży medycznej i farmaceutycznej: platforma, z której korzysta kilkanaście tysięcy lekarzy, panel administracyjny z aplikacją PWA, system enterprise do zarządzania konferencjami i system zgód współdzielony przez 5 aplikacji.",
+      en: "Web applications for a product company: a platform with over ten thousand active users, an admin panel with a PWA, an enterprise conference management system and a consent system shared by 5 applications.",
+      pl: "Aplikacje webowe rozwijane w firmie produktowej: platforma z kilkunastoma tysiącami aktywnych użytkowników, panel administracyjny z aplikacją PWA, system enterprise do zarządzania konferencjami i system zgód współdzielony przez 5 aplikacji.",
     },
     metric: {
       value: "50 → 98",
@@ -15,8 +15,8 @@ export const EXPERIENCES = [
     },
     highlights: [
       {
-        en: "Built a new Vue 3 + TypeScript SPA from scratch to replace a legacy jQuery app on a platform used by over ten thousand doctors. Migrated 6 modules and 50+ views step by step, with zero downtime.",
-        pl: "Od zera zbudowałem nowy frontend SPA w Vue 3 + TypeScript w miejsce legacy aplikacji w jQuery, na platformie, z której korzysta kilkanaście tysięcy lekarzy. Stopniowo przeniosłem 6 modułów i ponad 50 widoków, bez przestojów.",
+        en: "Built a new Vue 3 + TypeScript SPA from scratch to replace a legacy jQuery app on a platform with over ten thousand active users. Migrated 6 modules and 50+ views step by step, with zero downtime.",
+        pl: "Od zera zbudowałem nowy frontend SPA w Vue 3 + TypeScript w miejsce legacy aplikacji w jQuery, na platformie z kilkunastoma tysiącami aktywnych użytkowników. Stopniowo przeniosłem 6 modułów i ponad 50 widoków, bez przestojów.",
       },
       {
         en: "Designed a monorepo with two applications (30+ screens) and a shared library of 40+ components and composables documented in Storybook, so new features land in both apps without duplicated code.",

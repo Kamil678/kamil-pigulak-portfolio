@@ -9,9 +9,9 @@ export const PROFILE = {
   workMode: { en: "Hybrid or remote", pl: "Hybrydowo lub zdalnie" },
   cvUrl: "/cv/Kamil-Pigulak-CV.pdf",
   repoUrl: "https://github.com/Kamil678/kamil-pigulak-portfolio",
-  projectsCount: 15,
+  projectsCount: 20,
   coreStack: ["Vue", "Nuxt", "TypeScript", "React"],
-  alsoStack: ["Tailwind", "Cypress", "PHP", "Laravel"],
+  alsoStack: ["Tailwind", "Cypress", "PHP"],
   languages: [
     { name: { en: "Polish", pl: "polski" }, level: { en: "native", pl: "ojczysty" } },
     { name: { en: "English", pl: "angielski" }, level: { en: "B2", pl: "B2" } },
