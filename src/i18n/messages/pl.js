@@ -49,7 +49,7 @@ export default {
       eyebrow: "02 / Doświadczenie",
       title: "Przebieg pracy",
       description:
-        "Zespół produktowy w branży medycznej i farmaceutycznej oraz projekty freelance. Głównie Vue 3, Nuxt i TypeScript, a także React i PHP.",
+        "Praca w zespole produktowym nad aplikacjami dla tysięcy użytkowników oraz własne projekty freelance. Głównie Vue 3, Nuxt i TypeScript, a także React i PHP.",
     },
     stack: {
       eyebrow: "03 / Stack",
@@ -93,7 +93,7 @@ export default {
   },
   about: {
     paragraphs: [
-      "Od {since} roku pracuję komercyjnie jako Frontend Developer: w zespole produktowym w branży medycznej i farmaceutycznej oraz samodzielnie jako freelancer. Specjalizuję się w Vue 3, Nuxt i TypeScript. Projektuję aplikacje od architektury po wdrożenie i samodzielnie podejmuję decyzje techniczne.",
+      "Od {since} roku pracuję komercyjnie jako Frontend Developer: w zespole produktowym, tworząc aplikacje dla tysięcy użytkowników, oraz samodzielnie jako freelancer. Specjalizuję się w Vue 3, Nuxt i TypeScript. Projektuję aplikacje od architektury po wdrożenie i samodzielnie podejmuję decyzje techniczne.",
       "Projektowałem monorepo ze współdzieloną biblioteką komponentów, tworzyłem aplikacje PWA i prowadziłem stopniową migrację systemu legacy bez przestojów. Dbam o jakość: testy E2E w CI/CD, spójne design systemy i dostępność zgodną z WCAG 2.1 AA. Przy projektach dla klientów biorę na siebie cały proces, od wyceny i wymagań po wdrożenie i hosting.",
       "Nie zamykam się na jeden framework. Komercyjnie pracowałem też w React, a wzorce przenoszę między ekosystemami: composables i custom hooki, Pinia i Redux, Vue Router i React Router rozwiązują te same problemy. Dlatego w nowym projekcie liczy się dla mnie architektura, a nie sama biblioteka.",
       "Mam też doświadczenie full-stack w PHP (Laravel, Laminas). Na co dzień pracuję z Claude Code, ale świadomie: każdą zmianę weryfikuję, bo odpowiedzialność za kod zostaje po mojej stronie.",

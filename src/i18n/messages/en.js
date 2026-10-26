@@ -48,7 +48,7 @@ export default {
       eyebrow: "02 / Experience",
       title: "Work history",
       description:
-        "A product team in the medical and pharmaceutical industry, plus freelance work. Mostly Vue 3, Nuxt and TypeScript, with React and PHP too.",
+        "Building apps used by thousands in a product team, plus my own freelance projects. Mostly Vue 3, Nuxt and TypeScript, with React and PHP too.",
     },
     stack: {
       eyebrow: "03 / Stack",
@@ -92,7 +92,7 @@ export default {
   },
   about: {
     paragraphs: [
-      "I've been working commercially as a Frontend Developer since {since}: in a product team in the medical and pharmaceutical industry, and on my own as a freelancer. I specialise in Vue 3, Nuxt and TypeScript. I design applications from architecture to deployment and make technical decisions on my own.",
+      "I've been working commercially as a Frontend Developer since {since}: in a product team building apps for thousands of users, and on my own as a freelancer. I specialise in Vue 3, Nuxt and TypeScript. I design applications from architecture to deployment and make technical decisions on my own.",
       "I've designed a monorepo with a shared component library, built PWAs and led a step-by-step, zero-downtime migration of a legacy system. I care about quality: E2E tests in CI/CD, consistent design systems and WCAG 2.1 AA accessibility. On client projects I own the whole process, from the quote and requirements to deployment and hosting.",
       "I don't tie myself to one framework. I've also worked commercially with React, and I carry patterns across ecosystems: composables and custom hooks, Pinia and Redux, Vue Router and React Router solve the same problems. So on a new project what matters to me is the architecture, not the library.",
       "I also have full-stack experience in PHP (Laravel, Laminas). I use Claude Code every day, deliberately: I review every change, because responsibility for the code stays with me.",

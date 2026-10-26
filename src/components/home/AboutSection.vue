@@ -18,7 +18,7 @@
             </div>
             <div class="tile flex flex-col p-5">
               <dt class="text-sm text-muted">{{ t("about.statProjects") }}</dt>
-              <dd class="order-first font-mono text-4xl font-medium">{{ PROFILE.projectsCount }}</dd>
+              <dd class="order-first font-mono text-4xl font-medium">{{ PROFILE.projectsCount }}+</dd>
             </div>
           </dl>
         </div>
